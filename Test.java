@@ -1,984 +1,46 @@
-//java ·½·¨ÖØĞ´£¬ÓëÊµÀı»¯¶ÔÏóµÄÏòÉÏ×ªĞÍ
-//class person {
-//    public  void print() {
-//        System.out.println("ÎÒÊÇ°Ö°Ö");
-//    }
-//    }
-//    class Student extends  person{
-//        @Override
-//        public void print() {
-//
-//            System.out.println("ÎÒÊÇ¶ù×Ó");
-//        }
-//    }
-//public class Test{
-//    public static void main(String[] args) {
-//         person per =new Student();
-//            per.print();
-//    }
-//}
 
 
-//76234ÓÃµİ¹éÍê³É
-//public  class Test{
-//    static private int n;
-//    public static void main(String[] args) {
-//       Test.n=76234;
-//        if(n>=10){
-//            System.out.print(n/10);
-//        }
-//        System.out.print(n%10);
-//    }
-//}
-
-//ÌâÄ¿£ººï×Ó³ÔÌÒÎÊÌâ£ººï×ÓµÚÒ»ÌìÕªÏÂÈô¸É¸öÌÒ×Ó£¬µ±¼´³ÔÁËÒ»°ë£¬»¹²»ñ«£¬ÓÖ¶à³ÔÁËÒ»¸ö
-//µÚ¶şÌìÔçÉÏÓÖ½«Ê£ÏÂµÄÌÒ×Ó³ÔµôÒ»°ë£¬ÓÖ¶à³ÔÁËÒ»¸ö
-//ÒÔºóÃ¿ÌìÔçÉÏ¶¼³ÔÁËÇ°Ò»ÌìÊ£ÏÂ   µÄÒ»°ëÁãÒ»¸ö¡£µ½µÚ10ÌìÔçÉÏÏëÔÙ³ÔÊ±£¬¼ûÖ»Ê£ÏÂÒ»¸öÌÒ×ÓÁË¡£
-//ÇóµÚÒ»Ìì¹²ÕªÁË¶àÉÙ¡£
-//n,n/2,n/2-1,...,1
-//public class Test
-//{
-//    public static void main(String[] args)
-//    {
-//        System.out.println(total(1));
-//        System.out.println(total(2));
-//        System.out.println(total(3));
-//        System.out.println(total(4));
-//        System.out.println(total(5));
-//        System.out.println(total(6));
-//        System.out.println(total(7));
-//        System.out.println(total(8));
-//        System.out.println(total(9));
-//        System.out.println(total(10));
-//    }
-//    static int total(int day)
-//    {
-//        if (day == 10)
-//        {
-//            return 1;
-//        }
-//        else
-//        {
-//            return (total(day + 1 )+1)* 2;
-//        }
-//    }
-//}
-
-//·½·¨2 Ñ­»·
-//public class Test {
-//    public static void main(String[] args) {
-//        int sum = 0, remain = 1;
-////Ã¿Ìì³ÔÊ£µÄÌÒ×Ó¼ÓÒ»¸öÕıºÃÊÇÇ°Ò»ÌìÌÒ×ÓµÄÒ»°ë£¬Ã¿ÌìÌÒ×ÓµÄ×ÜÊı¾ÍÊÇÇ°Ò»ÌìÊ£ÏÂÌÒ×ÓµÄÊıÁ¿
-//        for (int day = 9; day >= 1; day--) {
-//            sum = (remain + 1) * 2;
-//            remain = sum;
-//            System.out.println("µÚ" + day + "Ìì»¹Ê£" + remain + "¸öÌÒ×Ó");
-//        }
-//        System.out.println(sum);
-//    }
-//}
-
-//³éÏó·½·¨£¬Ö¸µÄÊÇÉùÃ÷¶øÎ´ÊµÏÖµÄ·½·¨£¬ËüÖ»²»¹ıÊÇÔÚÆÕÍ¨µÄÀàµÄ»ù´¡ÉÏÀ©³äÁËÒ»Ğ©³éÏóÀà°ÕÁË£¬Ã»ÓĞ·½·¨Ìå£¬ËûËùÔÚµÄÀàÖĞºÍ·½·¨¶¼Òª
-//ÓÃabstractÀ´ĞŞÊÎ
-//³éÏóÀà²»Ïó¾ßÌåÀàÄÇÑùÃèÊöÒ»Àà¾ßÌåÊÂÎï£¬ËüÊÇÌáÈ¡¶àÖÖ¾ßÓĞÏàËÆĞÔµÄ¾ßÌåÊÂÎïµÄ¹²Í¬ÌØÕ÷¶ø²úÉúµÄ
-// ±ÈÈç£¬helicoptor, jet, fighter¸¸Ààplane£¬ÓĞstart(),takeOff(),speedUp(),changeDirection()µÈ·½·¨£¬
-// ÕâÊÇ¹²ĞÔ£¬µ«ÏÖÊµÖĞÓĞÒ»¸ö¾ßÌåµÄplaneÂğ£¿Ã»ÓĞ£¬ËüÊÇ³éÏó³öÀ´µÄ£¬¸ù±¾²»´æÔÚ¡£ËùÒÔÊµÀı»¯Ò»¸öplaneÊÇÃ»ÓĞÒâÒåµÄ£¬
-// Òò´ËÃæÏò¶ÔÏó³ÌĞòÉè¼Æ»úÖÆ½ûÖ¹¶ÔÏóÊµÀı»¯£¬³éÏóÀàÖĞ½ûÖ¹ÊµÀı»¯¶ÔÏó
-//³éÏóÀàÒ»¶¨²»ÄÜÓÃfinalÉùÃ÷£¬ÒòÎªfinal²»ÄÜÓĞ×ÓÀà£¬¶ø³éÏóÀàÒ»¶¨º¬ÓĞ×ÓÀà£¬ÏàÓ¦µÄ£¬³éÏó·½·¨Ò²²»ÄÜº¬ÓĞprivateÀ´ĞŞÊÎ
-//ÒòÎªprivateĞŞÊÎµÄ·½·¨²»ÄÜ±»¸²Ğ´£¬¶ø³éÏó·½·¨ÔòÒ»¶¨Òª±»¸²Ğ´
-//privateºÍabstract²»ÄÜÍ¬Ê±Ê¹ÓÃ
-//³éÏóÀà±ØĞëÓĞ×ÓÀà£¬ÇÒ×ÓÀà±ØĞëÖØĞÂ¸²Ğ´¸Ã³éÏó¸¸ÀàµÄ³éÏó·½·¨£¬ÀıÈç³éÏóÀàPerson£¬×ÓÀàStudent£¬
-// Person per=new Student£¨),per.fun(ÊµÀı»¯×ÓÀà£¬ÏòÉÏ×ªĞÍ£©
-//ÆÕÍ¨·½·¨¿ÉÒÔÓĞ·µ»ØÖµÒ²¿ÉÒÔÃ»ÓĞ·µ»ØÖµ£¬¶ø¹¹Ôì·½·¨Ò»¶¨Ã»ÓĞ·µ»ØÖµ£¬Ò²Ã»ÓĞstatic£¬final£¬abstractµÈ´ÊµÄĞŞÊÎ£¬
-// ·ÖÎªÓĞ²Î¹¹ÔìºÍÎŞ²Î¹¹Ôì
-//abstract class Test {
-//    private String name; // ÊôĞÔ
-//
-//    public String getName() {
-//        return this.name;
-//    }
-//
-//    public void setName(String name) {
-//        this.name = name;
-//
-//    }
-//}
-
-
-//javaÖĞµÄÊäÈë
-//import java.util.Scanner;
-//public class Test {
-//    public static void main(String[] args) {
-//        custom();
-//    }
-//
-//    public static boolean custom()
-//
-//    {
-//        System.out.println("ÄúĞèÒª¼ÓÄûÃÊÂğ£¿ y£ºĞèÒª  n£º²»ĞèÒª");
-//        Scanner scanner = new Scanner(System.in);
-//        String str = scanner.nextLine();
-//        if (str.equalsIgnoreCase("y")) {
-//
-//            System.out.println("¿Í»§ÏëÒªÄûÃÊ");
-//            return true;
-//        } else if(str.equalsIgnoreCase("n")){
-//            System.out.println("¿Í»§Ê²Ã´¶¼²»¼Ó");
-//            return false;
-//        }
-//        else{
-//            System.out.println("·Ç·¨ÊäÈë£¡");
-//            return false;
-//        }
-//
-//    }
-//
-//}
-
-//´úÀíÄ£Ê½ Ä£Äâ´ú¹º
-//interface ISubject {
-//    //ºËĞÄÒµÎñÊÇÂòµçÄÔ
-//    void buyComputer();
-//}
-//
-////ÕæÊµÒµÎñ, Ïàµ±ÓÚÊµ¼ÊÉÏÒª¸¶¿îµÄ¿Í»§
-//class RealSubject implements ISubject {
-//    public void buyComputer() {
-//        System.out.println("2.ÂòÒ»Ì¨macµçÄÔ£¬¸¶¿î");
-//    }
-//}
-//
-////¸¨ÖúÕæÊµÒµÎñµÄÊµÏÖ, Ïàµ±ÓÚ´ú¹º
-//class ProxySubject implements ISubject {
-//    //´«ÈëµÄÊÇ½Ó¿Ú¶ÔÏó
-//    private ISubject subject;
-//    //´«ÈëÕæÊµÒµÎñ¶ÔÏó
-//    public ProxySubject(ISubject subject) {
-//        this.subject = subject;
-//    }
-//
-//    public void beforeBuyComputer() {
-//        System.out.println("1.µ½ÃÀ¹úÆ»¹ûµêÅÅ¶Ó");
-//    }
-//    public void afterBuyComputer() {
-//        System.out.println("3.½«µçÄÔ¿ìµİ»Ø¿Í»§ÊÖÖĞ");
-//    }
-//
-//    //ÒµÎñÁ÷³Ì
-//    public void buyComputer() {
-//        this.beforeBuyComputer();
-//        this.subject.buyComputer();
-//        this.afterBuyComputer();
-//    }
-//}
-//public class Test {
-//    public static void main(String[] args) {
-//        ISubject subject = new ProxySubject(new RealSubject());
-//        subject.buyComputer();
-//    }
-//}
-
-
-//¼òµ¥µÄÊµÀı»¯¶ÔÏóÖ±½Ó¸³Öµ
-//class Test{
-//    public static void main(String[]args){
-//        Person person=new Person();
-//        person.name="ºÎºÆÔ´";
-//        person.age=21;
-//        person.salary=380000;
-//        person.fun();
-//    }
-//}
-//
-//     class Person{
-//         String name;
-//         int age;
-//         int salary;
-//        void fun(){
-//        System.out.println("ĞÔÃû:"+name );
-//            System.out.println("ÄêÁä:"+age);
-//            System.out.println("ÄêĞ½:"+salary);
-//        }
-//
-//        }
-//
-
-
-//getter setterÓÃ·¨
-
-//class Test{
-//    public static void main(String[]args){
-//        Person person=new Person();
-//        person.age=22;
-//        person.setName("ºÎºÆÔ´");
-//        person.setSalary(390000);
-//
-//        System.out.println("ĞÕÃûÎª:"+person.getName());
-//        System.out.println("ÄêÁäÎª:"+person.age);
-//        System.out.println("ÄêĞ½Îª:"+person.getSalary());
-//    }
-//}
-//class Person{
-//    int age;
-//    String name;
-//    int salary;
-//
-//    public int getAge() {
-//        return age;
-//    }
-//    public String getName() {
-//        return name;
-//    }
-//
-//    public int getSalary() {
-//        return salary;
-//    }
-//
-//    public void setAge(int age) {
-//        this.age = age;
-//    }
-//
-//    public void setName(String name) {
-//        this.name = name;
-//    }
-//
-//    public void setSalary(int salary) {
-//        this.salary = salary;
-//    }
-//
-//}
-
-
-
-//ÄÚÍâ²¿ÀàµÄµ÷ÓÃ
-//    class Father {
-//
-//        private String name = "zhangjun";
-//
-//
-//        class Child {
-//
-//            public String intoFather() {
-//
-//                return Father.this.name;
-//            }
-//
-//        }
-//
-//
-//
-//    }
-//public class Test{
-//    public static void main(String[] args) {
-//        Father.Child per = new Father().new Child();
-//
-//        System.out.println(per.intoFather());
-//    }
-//}
-
-
-// class A {
-//     int y = 6;
-//
-//   class Inner {
-//         int y = 3;//±àÒë²»¹ı£¬1.static finally 2.int y=3
-//
-//        void show() {
-//            System.out.println(y);
-//        }
-//    }
-//
-//
-//    public static void main(String[] args) {
-//
-//        A.Inner inner = new A().new Inner();
-//        inner.show();
-//    }
-//}
-
-
-//class A{
-//        A(){
-//        System.out.println("A");
-//        }
-//        }
-//
-//class B extends A{
-//    B(){
-//        System.out.println("B");
-//    }
-//
-//    public static void main(String[] args){
-//        B b=new B();
-//    }
-//}
-
-
-//´òÓ¡100-999Ë®ÏÉ»¨Êı
-//class Test {
-//    public static void main(String[] args) {
-//
-//        for (int num = 100; num < 1000; num++) {
-//                int gewei = num % 10;
-//                int shiwei = (num / 10) % 10;
-//                int baiwei = num / 100;
-//
-//                    int total = gewei * gewei * gewei + shiwei * shiwei * shiwei + baiwei * baiwei * baiwei;
-//                    if (total == num) {
-//                        System.out.println(num);
-//
-//                    }
-//                }
-//
-//
-//        }
-//    }
-
-
-
-//ÓÃ³éÏóÀàÄ£ÄâĞÇ°Í¿Ë¿§·È»úÖÆ×÷¹ı³Ì
-//import java.util.Scanner;
-//class Test {
-//
-//
-//    public static void main(String[] args) {
-//        coffee per = new coffee();
-//        per.shaoshui();
-//        per.receipt();
-//        per.custom();
-//        per.jiaoban();
-//        per.dicha();
-//    }
-//}
-//
-//    abstract  class beverage{
-//       private  void shaoshui(){
-//            System.out.println("ÉÕ¿ªË®");
-//    }
-//        abstract  void receipt();
-//      private  void jiaoban(){
-//            System.out.println("½Á°èÒûÁÏ");
-//        }
-//
-//        void dicha(){
-//            System.out.println("¸ø´óÀĞµİÒûÁÏ");
-//        }
-//    }
-//    class coffee extends beverage{
-//          void shaoshui(){
-//            System.out.println("ÉÕ¿ªË®");
-//
-//        }
-//         void receipt() {
-//             System.out.println("¼ÓÒ»°üÃØÖÆ¿§·È·Û");
-//         }
-//
-//         public static boolean custom(){
-//
-//             //String a=null;
-//             //System.out.println(a);
-//            System.out.println("ĞèÒª¼ÓÅ£ÄÌÂğ£¿");
-//            Scanner scanner=new Scanner(System.in);
-//            String str=scanner.nextLine();
-////             Scanner scanner1=new Scanner(System.in);
-////             String str1=scanner1.nextLine();
-//            // String str1=null;
-////             System.out.println(str1.equals(null));
-//
-//            if(str!=" "&&str==null&&str.equalsIgnoreCase("y")){
-//                System.out.println("¼ÓÒ»°üÅ£ÄÌ");
-//                return true;
-//            }
-//            else if (str.equalsIgnoreCase("n")){
-//                System.out.println("¿Í»§²»ĞèÒª¼ÓÅ£ÄÌ");
-//                return false;
-//            }
-//            else{
-//                System.out.println("·Ç·¨ÊäÈë");
-//                return false;
-//            }
-//
-//        }
-//        void jiaoban(){
-//            System.out.println("½Á°èÒûÁÏ");
-//        }
-//        void dicha(){
-//            System.out.println("¸ø´óÀĞµİ¿§·È");
-//        }
-//    }
-
-
-
-
-//´úÀíÄ£Ê½ Ä£Äâ´ú¹º
-//interface ISubject {
-    //ºËĞÄÒµÎñÊÇÂòµçÄÔ
-  //  void buyComputer();
-//}
-
-//ÕæÊµÒµÎñ, Ïàµ±ÓÚÊµ¼ÊÉÏÒª¸¶¿îµÄ¿Í»§
-//class RealSubject implements ISubject {
-//    public void buyComputer() {
-//        System.out.println("2.ÂòÒ»Ì¨macµçÄÔ£¬¸¶¿î");
-//    }
-//}
-//
-////¸¨ÖúÕæÊµÒµÎñµÄÊµÏÖ, Ïàµ±ÓÚ´ú¹º
-//class ProxySubject implements ISubject {
-//    //´«ÈëµÄÊÇ½Ó¿Ú¶ÔÏó
-//    private ISubject subject;
-//    //´«ÈëÕæÊµÒµÎñ¶ÔÏó
-//    public ProxySubject(ISubject subject) {
-//        this.subject = subject;
-//    }
-//
-//    public void beforeBuyComputer() {
-//        System.out.println("1.µ½ÃÀ¹úÆ»¹ûµêÅÅ¶Ó");
-//    }
-//    public void afterBuyComputer() {
-//        System.out.println("3.½«µçÄÔ¿ìµİ»Ø¿Í»§ÊÖÖĞ");
-//    }
-//
-//    //ÒµÎñÁ÷³Ì
-//    public void buyComputer() {
-//        this.beforeBuyComputer();
-//        this.subject.buyComputer();
-//        this.afterBuyComputer();
-//    }
-//}
-//public class Test {
-//    public static void main(String[] args) {
-//        ISubject subject = new ProxySubject(new RealSubject());
-//        subject.buyComputer();
-//    }
-//}
-//
-//
-
-
-//´ú¹º Âòaj
-
-//interface Isubject{
-//    void buyAJ();
-//}
-//class realsubject implements Isubject{
-//    public void buyAJ(){
-//        System.out.println("ÂòÒ»Ë«AJ£¬ÔÚ´ú¹ºÆ½Ì¨¸¶¿î");
-//    }
-//}
-//
-//class proxysubject implements Isubject{
-//    private Isubject subject;
-//    //ÕâÀïÒ²ÊÇÒ»Ñù£¬·½·¨Ãû³ÆÓëÀàÃûÏàÍ¬£¬Ïàµ±ÓÚ¹¹Ôì·½·¨£¬Ã»ÓĞ·µ»ØÖµ£¬ÉõÖÁÁ¬voidÒ²Ã»ÓĞ£¬Ïàµ±ÓÚnew
-//   public    proxysubject(Isubject subject){
-//        this.subject=subject;
-//
-//    }
-//
-//
-//   public void beforebuy(){
-//            System.out.println("È¥ÃÀ¹úAJ×¨ÂôµêÅÅ¶Ó³éºÅ");
-//        }
-//public void afterbuy(){
-//    System.out.println("¿ìµİµ½¿Í»§ÊÖÉÏ");
-//    }
-//    //ÕâÀïÇĞ¼ÇÒ»¶¨¹ı³Ì·½·¨Ò»¶¨ÒªÊÇbuyAJµÄĞÎÊ½£¬²»ÄÜÓÃÆäËû×Ö·ûÃû×ÖÀ´´úÌæ
-//    //´ú¹º£º´úÀí£¬ÕæÊµ¿Í»§£¬»¹ÓĞ½Ó¿Ú£¬ÆäÖĞ½Ó¿ÚÖ»ÊÇ¶¨ÒåÁËÒ»¸ö½ÏÎª³éÏóµÄ·½·¨£¬¸Ã·½·¨ÓÉÕæÊµ¿Í»§È¥ÖØĞ´£¬²¢ÇÒÔÚ´úÀíÀàÖĞÈ¥ÍêÉÆ·½·¨
-//    //Ò²¾ÍÊÇÒªÔÚ´úÀíÖĞÈ¥¾ßÌåÊµÏÖ·½·¨£¬ÆäÖĞ´«µİÊµÀı¶ÔÏóÊÇÍ¨¹ı´úÀíÀàµÄ¹¹Ôì·½·¨´«ÈëÊµÀı£¬ÆäÖĞ£¬Ê×ÏÈÒªÔÚ´úÀíÖĞprivateÒ»¸ö½Ó¿ÚµÄµÄ
-//    // ¶ÔÏó£¬È»ºóÔÙ½«Ö÷·½·¨ÖĞÊµÀı³öÀ´µÄ¶ÔÏó´«µİ¸øËü£¬this .½Ó¿Ú¶ÔÏó=ÊµÀı¶ÔÏó£¬Õâ¶¼ÊÇÔÚ´úÀíµÄ¹¹Ôì·½·¨ÖĞ´«ÈëµÄ£¬¹¹Ôì·½·¨µÄ²ÎÊı
-//    //ÁĞ±íÄÚ£¬ĞÎ²ÎÊÇ ½Ó¿Ú.¶ÔÏóÃû³Æ,Ò»µ©´«ÈëÁËÊµÀı¶ÔÏó¾Í¿ÉÒÔÔÚ´úÀíÀàÖĞÈ¥¾ßÌå¡°´úÀí·½·¨¡±,Ò²¾ÍÊÇ¾­¹ı ½Ó¿Ú¶¨Òå·½·¨->ÕæÊµ²Ù×÷µÄ·½·¨->´úÀí·½·¨
-//    //À´Öğ²½ÍêÉÆ buy something£¨£©.
-//    public void buyAJ(){
-//        beforebuy();
-//         subject. buyAJ();
-//        afterbuy();
-//    }
-//}
-//public class Test{
-//
-//    public static void main(String[] args) {
-//        Isubject subject=new proxysubject(new realsubject());
-//        subject.buyAJ();
-//    }
-//
-//}
-
-
-//        ¶¨ÒåÒ»¸ö³éÏóµÄ"Role"Àà£¬ÓĞĞÕÃû£¬ÄêÁä£¬ĞÔ±ğµÈ³ÉÔ±±äÁ¿
-//        1£©ÒªÇó¾¡¿ÉÄÜÒş²ØËùÓĞ±äÁ¿(ÄÜ¹»Ë½ÓĞ¾ÍË½ÓĞ,ÄÜ¹»±£»¤¾Í²»Òª¹«ÓĞ)£¬
-//        ÔÙÍ¨¹ıGetXXX()ºÍSetXXX()·½·¨¶Ô¸÷±äÁ¿½øĞĞ¶ÁĞ´¡£¾ßÓĞÒ»¸ö³éÏóµÄplay()·½·¨£¬
-//        ¸Ã·½·¨²»·µ»ØÈÎºÎÖµ£¬Í¬Ê±ÖÁÉÙ¶¨ÒåÁ½¸ö¹¹Ôì·½·¨¡£RoleÀàÖĞÒªÌåÏÖ³öthisµÄ¼¸ÖÖÓÃ·¨¡£
-//        2£©´ÓRoleÀàÅÉÉú³öÒ»¸ö"Employee"Àà£¬¸ÃÀà¾ßÓĞRoleÀàµÄËùÓĞ³ÉÔ±£¨¹¹Ôì·½·¨³ıÍâ£©£¬
-//        ²¢À©Õ¹salary³ÉÔ±±äÁ¿£¬Í¬Ê±Ôö¼ÓÒ»¸ö¾²Ì¬³ÉÔ±±äÁ¿¡°Ö°¹¤±àºÅ£¨ID£©¡±¡£
-//        Í¬ÑùÒªÓĞÖÁÉÙÁ½¸ö¹¹Ôì·½·¨£¬ÒªÌåÏÖ³öthisºÍsuperµÄ¼¸ÖÖÓÃ·¨£¬»¹ÒªÇó¸²¸Çplay()·½·¨£¬
-//        ²¢Ìá¹©Ò»¸öfinal sing()·½·¨¡£
-//        3£©"Manager"Àà¼Ì³Ğ"Employee"Àà£¬ÓĞÒ»¸öfinal³ÉÔ±±äÁ¿"vehicle"
-//        ÔÚmain()·½·¨ÖĞÖÆÔìManagerºÍEmployee¶ÔÏó,²¢²âÊÔÕâĞ©¶ÔÏóµÄ·½·¨¡£
-//this µÄÈı´óÊôĞÔ£¬µ÷ÓÃÊôĞÔ£¬µ÷ÓÃ·½·¨£¬±íÊ¾µ±Ç°¶ÔÏó
-
-
-
-//abstract class Role
-//{
-//    private String name;
-//    private int age;
-//    private String sex;
-//    public Role()
-//    {
-//        System.out.println("******Role¹¹Ôì·½·¨1*****");
-//    }
-//    public Role(String n)
-//    {
-//        System.out.println("*******Role¹¹Ôì·½·¨2*****");
-//        System.out.println(n + this);
-//    }
-//    public void setName(String name) {
-//        this.name = name;//thisµ÷ÓÃ±¾ÀàÊôĞÔ
-//    }
-//
-//    public String getName() {
-//        return name;
-//    }
-//
-//    public void setAge(int age) {
-//        this.age = age;
-//    }
-//
-//    public int getAge() {
-//        return age;
-//    }
-//
-//    public void setSex(String sex) {
-//        this.sex = sex;
-//    }
-//
-//    public String getSex() {
-//        return sex;
-//    }
-//    public void getPersonInfo()
-//    {
-//        System.out.println("ĞÕÃû£º"+name+" ÄêÁä£º "+age + "  ĞÔ±ğ£º"+sex);
-//    }
-//    public abstract void play();
-//}
-//class Employee extends Role
-//{
-//    private int  salary;
-//    static int ID;
-//    public Employee()
-//    {
-//        System.out.println("******Employee¹¹Ôì·½·¨1*****");
-//    }
-//    public Employee(int x)
-//    {
-//        this();//thisµ÷ÓÃ±¾Àà·½·¨
-//        System.out.println("******Employee¹¹Ôì·½·¨2*****");
-//        this.salary = x;
-//        System.out.println("salary is " +salary);
-//    }
-//    public void Role(String n,int a )
-//    {
-//        this.ID = a;
-//        System.out.println("*******×ÓÀà¸²Ğ´Role¹¹Ôì·½·¨2*****");
-//        System.out.println(n + this);//this±íµ±Ç°¶ÔÏó
-//    }
-//
-//    final void sing()
-//    {
-//        //super.(n);
-//        System.out.println("sing a song");
-//    }
-//    public void play()
-//    {
-//        System.out.println("play football");
-//    }
-//
-//}
-//class Manager extends Employee
-//{
-//    public final String vehicle = "can not exchange";
-//}
-// class Text {
-//    public static void main(String[] args)
-//    {
-//        Employee per = new Employee(1000);
-//        Manager per1 = new Manager();
-//        per.setName("ÕÅÈı");
-//        per.setAge(33);
-//        per.setSex("ÄĞ");
-//        per.getPersonInfo();
-//        per.Role("six",11111111);
-//        per.play();
-//        per.sing();
-//    }
-//}
-
-
-//Á·Ï°
-//class Test{
-//
-//    public static void main(String[] args) {
-//
-//        city acity=new city();
-//        acity.country("±±¾©");
-//        acity.tary();
-//
-//    }
-//}
-// abstract class country{
-//    private String country1="Ó¢¹ú";
-//  String country2="ÖĞ¹ú";
-//    //Èô²»¼ÓÉÏ»¨À¨ºÅ£¬Ôò»á±»ÌáÊ¾ÎªÈ±ÉÙ·½·¨Ìå£¬»òÕßÓ¦¸ÃÉùÃ÷ÉÏĞŞÊÎ´Êabstract
-//     void  country(){
-//
-//     }
-//     void tary(){
-//         System.out.println(country1);
-//     }
-//
-////Èô¸¸ÀàµÄÊôĞÔÎªprivateË½ÓĞµÄ»°£¬ÄÇÃ´¸ÃÊôĞÔ±ã²»¿ÉÒÔ±»×ÓÀà·ÃÎÊ
-//}
-//class city extends country{
-//    String city1="Â×¶Ø";
-//    String city2="Î÷°²";
-//
-//    //¸¸ÀàprivateµÄÊôĞÔºÍ·½·¨×ÓÀà¿ÉÒÔ¼Ì³Ğµ«ÊÇ²»ÄÜ·ÃÎÊºÍÖØĞ´£¬ÔÚ×ÓÀà¿ª±ÙµÄÊ±ºò£¬ÄÚ´æ»á·ÖÅäÒ»¸ö¿Õ¼äÔÚ×ÓÀàµÄÍâ²¿Ğ´ÉÏ
-//    //¸¸ÀàµÄÊôĞÔºÍ·½·¨£¬°üÀ¨Ë½ÓĞÊôĞÔºÍË½ÓĞ·½·¨£¬ÔÚ×ÓÀàµÄÄÚ²¿¿Õ¼äĞ´ÉÏËü×Ô¼ºµÄÊıĞÔºÍ·½·¨£¬Á½Õß¼ÓÔÚÒ»Æğ¾Í¹¹³ÉÁË×ÓÀàµÄÍêÕû
-//    //µ«ÊÇÒ²¿ÉÒÔÍ¨¹ı¸¸ÀàµÄ·½·¨µ÷ÓÃÀ´·ÃÎÊÆäË½ÓĞÊôĞÔ£¬µ«Ç°ÌáÊÇ¸¸Àà·½·¨ÖĞ±¾Éí¾Í°üº¬ÆäË½ÓĞÊôĞÔºÍË½ÓĞ·½·¨µÄ»°£¬¶øÇÒ¸Ã·½·¨²»¿ÉÒÔÊÇË½ÓĞµÄ
-//    //¿ÉÒÔÓÃ¸¸ÀàµÄpublic·½·¨À´¼ä½ÓÊ¹ÓÃÆäË½ÓĞÊôĞÔ
-//        void tary(){
-//
-//        super.tary();
-//    }
-//
-//
-//    void country(String acity) {
-////¿ÉÒÔÖ±½Ó¸³Öµcity1£¬2µÄÖµ¸ø±äÁ¿h£¬Ò²¿ÉÒÔÍ¨¹ısuper.country1,2µÄ·½·¨À´µ÷ÓÃ¸¸ÀàµÄÊôĞÔ
-//String h=super.country2;
-//        System.out.println(acity);
-//        System.out.println(super.country2);
-//    }
-//}
-
-
-//½Ó¿ÚµÄĞŞÊÎ´ÊÄ¬ÈÏÊÇpublic£¨ÒòÎª½Ó¿Ú¾ÍÊÇĞèÒª¾ßÌåÊµÏÖ²ÅÓĞÒâÒå£©£¬¶øÆä×ÓÀàµÄĞŞÊÎ´ÊÈ¨ÏŞ²»ÄÜĞ¡ÓÚpublic£¬ËùÓĞ×ÓÀà·½·¨ÖĞÖ»ÄÜÓÃpublic
-////½Ó¿ÚµÄ´óĞ´IÒ»¶¨ÒªÕıÈ·
-////½Ó¿ÚÖĞµÄÊôĞÔ¶ÔËùÓĞÊµÏÖÀàÖ»ÓĞÒ»·İËùÒÔÒªÓÃstatic£¬Ò²¾ÍÊÇ½Ó¿ÚÖĞÖ»ÄÜÓĞ³£Á¿£¬²»ÄÜÓÖ±äÁ¿£¨²»ÄÜÈÃ±ğµÄÀàÈ¥ĞŞ¸Ä£©£¬³£Á¿ÓÃstatic£¬final£¬
-////ĞŞÊÎ
-////½Ó¿ÚÏÂµÄ×ÓÀàº¯Êı¾¡Á¿ÓÃpublic
-////private ½Ó¿Ú ½Ó¿Ú¶ÔÏó
-////
-//interface Isubject{
-//    void buyadidas();
-//}
-//class realsubject implements Isubject{
-//    public void buyadidas(){
-//        System.out.println("ÂòÒ»Ë«°¢µÏ´ïË¹£¬ÔÚ´ú¹ºÆ½Ì¨¸¶¿î");
-//    }
-//
-//}
-//class proxysubject implements Isubject{
-//    private Isubject subject;
-//
-//    //´Ë´¦²»ÄÜ¼Óvoid
-//    //ÒòÎª´ËÊ±thisÏàµ±ÓÚ·µ»ØÖµ£¬¶ø·µ»ØÖµ²»ÄÜ¼Óthis
-//    //°Ù¶È£º
-//
-//    //·µ»ØµÄÊÇµ÷ÓÃthisËù´¦·½·¨µÄÄÇ¸ö¶ÔÏóµÄÒıÓÃ£¬
-//    //
-//    //  Ò»µãµã·ÖÎöµÄ»°£¬Ö÷¸ÉÊÇ¡°·µ»ØµÄÊÇÒıÓÃ¡±£»
-//    //
-//    //  Ê²Ã´ÒıÓÃÄØ£¿¡°ÄÇ¸ö¶ÔÏóµÄÒıÓÃ¡±£»
-//    //
-//    //  ÄÄ¸ö¶ÔÏóÄØ£¿¡°µ÷ÓÃ·½·¨µÄÄÇ¸ö¶ÔÏó¡±£»
-//    //
-//    //  µ÷ÓÃµÄÄÄ¸ö·½·¨ÄØ£¿¡°µ÷ÓÃµÄÊÇthisËùÎ»ÓÚµÄ·½·¨¡±£»ÕâÑù¾ÍÇå³şÁË¡£
-//    //
-//    //  ÔÙ×Ü½áÒ»ÏÂ¾ÍÊÇ£¬this×÷Îª·µ»ØÖµÊ±£¬·µ»ØµÄÊÇµ÷ÓÃÄ³·½·¨µÄ¶ÔÏóµÄÒıÓÃ£¬
-//    // Õâ¸ö·½·¨ÕıÊÇ°üº¬¡°return this;¡±ÕâĞĞÃüÁîµÄÄÇ¸ö·½·¨£»¸ü¼òµ¥µãËµ£¬
-//    // ¾ÍÊÇË­µ÷ÓÃ·µ»ØµÄ¾ÍÊÇË­¡£ÓÉÓÚ·µ»ØµÄÊÇ¶ÔÏóÒıÓÃ£¬
-//    // ËùÒÔthis²»ÄÜÓÃÔÚ¾²Ì¬³ÉÔ±·½·¨ÖĞ£¬Ö»ÄÜÔÚ·Ç¾²Ì¬³ÉÔ±·½·¨ÖĞ³öÏÖ
-//    //https://www.cnblogs.com/chanchan/p/7812166.html
-//   public    proxysubject(Isubject subject){
-//        this.subject=subject;
-//    }
-//  public void beforebuy(){
-//       System.out.println("È¥°¢µÏ´ïË¹×¨ÂôµêÅÅ¶Ó");
-//
-//    }
-//   public void afterbuy(){
-//        System.out.println("¿ìµİ¸ø¿Í»§");
-//
-//    }
-//  public void buyadidas(){
-//       this.beforebuy();
-//        this.subject.buyadidas();
-//       this.afterbuy();
-//
-//    }
-//
-//}
-//class Test{
-//    public static void main(String[]args){
-//    Isubject subject=new proxysubject(new realsubject());
-//    subject.buyadidas();
-//}
-//
-//}
-
-
-//this ±íÊ¾µ±Ç°¶ÔÏó
+//this è¡¨ç¤ºå½“å‰å¯¹è±¡
 //class Person{
 //public void print(){
-//    System.out.println("[PRINT]·½·¨£º"+this);
+//    System.out.println("[PRINT]æ–¹æ³•ï¼š"+this);
 //}
 //}
 //public class Test {
 //    public static void main(String[] args) {
 //        Person p1 = new Person();
-//        System.out.println("[MAIN]·½·¨£º" + p1);
+//        System.out.println("[MAIN]æ–¹æ³•ï¼š" + p1);
 //        p1.print();
 //        System.out.println("=================");
 //        Person p2 = new Person();
-//        System.out.println("[MAIN]·½·¨£º" + p2);
+//        System.out.println("[MAIN]æ–¹æ³•ï¼š" + p2);
 //        p2.print();
 //    }
 //}
-//Ê¹ÓÃstaticĞŞÊÎµÄ·½·¨£¬¿ÉÒÔÖ±½ÓÓÃ¶ÔÏó.º¬ÓĞstaticĞŞÊÎ·ûµÄ·½·¨Ãû³ÆÀ´µ÷ÓÃ
-//staticĞŞÊÎµÄ·½·¨²»ÄÜ·ÃÎÊ·ÇstaticµÄ·½·¨»òÊôĞÔ
-//ËùÒÔ·ÇsaticµÄ·½·¨¿ÉÒÔ·ÃÎÊstaticĞŞÊÎµÄÊôĞÔ»òÕß·½·¨
+//ä½¿ç”¨staticä¿®é¥°çš„æ–¹æ³•ï¼Œå¯ä»¥ç›´æ¥ç”¨å¯¹è±¡.å«æœ‰staticä¿®é¥°ç¬¦çš„æ–¹æ³•åç§°æ¥è°ƒç”¨
+//staticä¿®é¥°çš„æ–¹æ³•ä¸èƒ½è®¿é—®éstaticçš„æ–¹æ³•æˆ–å±æ€§
+//æ‰€ä»¥ésaticçš„æ–¹æ³•å¯ä»¥è®¿é—®staticä¿®é¥°çš„å±æ€§æˆ–è€…æ–¹æ³•
 
 
-//ì³²¨ÄÇÆõÊıÁĞ
-//0 1 1 2 3 5 8
-//n=(n-1)+(n-2)
-//´òÓ¡20ÒÔÄÚì³²¨ÄÇÆõÊıÁĞ
-//class Test {
-//
-//    public static void main(String[] args) {
-////
-//        feibo j=new feibo();
-//       for (int n = 1; n < 20; n++) {
-//            System.out.println(j.hh(n));
-//       }
-//
-//    }
-//}
-//   class feibo {
-//
-//
-//     static int hh(int n) {
-//
-//            if (n == 2||n==1) {
-//              return 1;
-//            } else {
-//        return hh(n - 2) + hh(n - 1);
-//
-//        }
-//
-//
-//
-//
-//        }
-//        }
 
 
-//ÀûÓÃjava½Ó¿ÚÊµÏÖ¼ÆËãÆ÷£¬ÊµÏÖ¼Ó¼õ³Ë³ıµÄ¹¦ÄÜ
-//import java.util.Scanner;
-//class Test {
-//    public static void main(String[] args) {
-//        fun i = new fun();
-//        jiafa s1 = new jiafa();
-//        jianfa s2 = new jianfa();
-//        chengfa s3 = new chengfa();
-//        chufa s4 = new chufa();
-//        System.out.println("ÇëÊäÈëÄãÒª¼ÆËãµÄÁ½¸öÊı×Ö:");
-//        Scanner scanner = new Scanner(System.in);
-//        Scanner scanner2 = new Scanner(System.in);
-//        int str = scanner.nextInt();
-//        int str2 = scanner2.nextInt();
-//        int a = str;
-//        int b = str2;
-//        System.out.println("ÇëÊäÈëÄúÏëÒª¼ÆËãµÄ·½Ê½(+£¬-£¬*£¬/):");
-//        Scanner scanner3 = new Scanner(System.in);
-//        String zifu1 = scanner3.next();
-//        //next()²»ÄÜ¶ÁÈ¡¿Õ¸ñ£¬nextline()¿ÉÒÔ¶ÁÈ¡
-//        //ÔÚÊµÏÖ×Ö·û´°¿ÚµÄÊäÈëÊ±£¬ÎÒ¸öÈË¸üÏ²»¶Ñ¡ÔñÊ¹ÓÃÉ¨ÃèÆ÷Scanner£¬Ëü²Ù×÷ÆğÀ´±È½Ï¼òµ¥¡£
-//        // ÔÚĞ´×÷ÒµµÄ¹ı³ÌÖĞ£¬ÎÒ·¢ÏÖÓÃScannerÊµÏÖ×Ö·û´®µÄÊäÈëÓĞÁ½ÖÖ·½·¨£¬Ò»ÖÖÊÇnext£¨£©£¬
-//        // Ò»ÖÖnextLine(),µ«ÊÇÕâÁ½ÖÖ·½·¨¾¿¾¹ÓĞÊ²Ã´Çø±ğÄØ£¿
-//        // Ê×ÏÈ£¬next£¨£©Ò»¶¨Òª¶ÁÈ¡µ½ÓĞĞ§×Ö·ûºó²Å¿ÉÒÔ½áÊøÊäÈë£¬¶ÔÊäÈëÓĞĞ§×Ö·ûÖ®Ç°Óöµ½µÄ¿Õ¸ñ¼ü¡¢Tab¼ü»òEnter¼üµÈ½áÊø·û£¬
-//        // next£¨£©·½·¨»á×Ô¶¯½«ÆäÈ¥µô£¬Ö»ÓĞÔÚÊäÈëÓĞĞ§×Ö·ûÖ®ºó£¬next£¨£©·½·¨²Å½«ÆäºóÊäÈëµÄ¿Õ¸ñ¼ü¡¢
-//        // Tab¼ü»òEnter¼üµÈÊÓÎª·Ö¸ô·û»ò½áÊø·û¡£¼òµ¥µØËµ£¬next£¨£©²éÕÒ²¢·µ»ØÀ´×Ô´ËÉ¨ÃèÆ÷µÄÏÂÒ»¸öÍêÕû±ê¼Ç¡£
-//        // ÍêÕû±ê¼ÇµÄÇ°ºóÊÇÓë·Ö¸ôÄ£Ê½Æ¥ÅäµÄÊäÈëĞÅÏ¢£¬
-//        // ËùÒÔnext·½·¨²»ÄÜµÃµ½´ø¿Õ¸ñµÄ×Ö·û´®¶ønextLine£¨£©·½·¨µÄ½áÊø·ûÖ»ÊÇEnter¼ü£¬
-//        // ¼´nextLine£¨£©·½·¨·µ»ØµÄÊÇEnter¼üÖ®Ç°µÄËùÓĞ×Ö·û£¬ËüÊÇ¿ÉÒÔµÃµ½´ø¿Õ¸ñµÄ×Ö·û´®µÄ¡£
-//        //nextLine£¨£©×Ô¶¯¶ÁÈ¡ÁË±»next£¨£©È¥µôµÄEnter×÷ÎªËûµÄ½áÊø·û£¬ËùÒÔÃ»°ì·¨¸øs2´Ó¼üÅÌÊäÈëÖµ¡£
-//        // ¾­¹ıÑéÖ¤£¬ÆäËûµÄnextµÄ·½·¨£¬Èçdouble nextDouble()  £¬
-//        // float nextFloat() £¬ int nextInt() µÈÓënextLine£¨£©Á¬ÓÃÊ±¶¼´æÔÚÕâ¸öÎÊÌâ£¬
-//        // ½â¾öµÄ°ì·¨ÊÇ£ºÔÚÃ¿Ò»¸ö next£¨£©¡¢nextDouble()  ¡¢ www.gzlij.com£¨£©¡¢nextFloat()¡¢nextInt()
-//        // µÈÓï¾äÖ®ºó¼ÓÒ»¸önextLine£¨£©Óï¾ä£¬½«±»next£¨£©È¥µôµÄEnter½áÊø·û¹ıÂËµô
-//        scanner3.nextLine();
-//        while(true) {
-//            if (zifu1.equals("+")) {
-//
-//                System.out.print("¼Ó·¨½á¹û:");
-//                i.func(s1, a, b);
-//                break;
-//
-//            } else if (zifu1.equals("-")) {
-//                System.out.print("¼õ·¨½á¹û:");
-//                i.func(s2, a, b);
-//                break;
-//
-//            } else if (zifu1.equals("*")) {
-//                System.out.print("³Ë·¨½á¹û:");
-//                i.func(s3, a, b);
-//                break;
-//            } else if (zifu1.equals("/")) {
-//                System.out.print("³ı·¨½á¹û:");
-//                i.func(s4, a, b);
-//                break;
-//
-//            }
-//            else {
-//                System.out.println("·Ç·¨ÊäÈë!");
-//                break;
-//            }
-//        }
-//
-//    }
-//}
-//
-//    interface Ijisuanqi {
-//        int jisuan(int a, int b);
-//
-//    }
-//
-//    class fun {
-//        public void func(Ijisuanqi per, int a, int b) {
-//            System.out.println(per.jisuan(a, b));
-//        }
-//
-//    }
-//
-//    class jiafa implements Ijisuanqi {
-//        public int jisuan(int a, int b) {
-//            return a + b;
-//        }
-//    }
-//
-//    class jianfa implements Ijisuanqi {
-//        public int jisuan(int a, int b) {
-//            return a - b;
-//        }
-//    }
-//
-//    class chengfa implements Ijisuanqi {
-//        public int jisuan(int a, int b) {
-//            return a * b;
-//        }
-//    }
-//
-//    class chufa implements Ijisuanqi {
-//        public int jisuan(int a, int b) {
-//            if (b == 0) {
-//
-//                return -1;
-//            } else {
-//                return a / b;
-//            }
-//        }
-//    }
-
-//Ò»µÀ°¢ÀïĞ£ÕĞÌâ
-//class HelloA {
-//
-//       public HelloA(){
-//           System.out.println("Hello A!¸¸Àà¹¹Ôì·½·¨");
-//       }
-//
-//      {        System.out.println("i'm A class.¸¸Àà·Ç¾²Ì¬´úÂë¿é");
-//
-//
-//      }
-//      static{
-//           System.out.println("static A ¸¸Àà¾²Ì¬´úÂë¿é");
-//       }
-//}
-//
-//     class HelloB extends HelloA {
-//        public HelloB(){
-//            System.out.println("Hello B! ¹¹Ôì·½·¨");
-//        }
-//        {
-//            System.out.println("i'm B class.·Ç¾²Ì¬´úÂë¿é");
-//        }
-//        static{
-//            System.out.println("static B ¾²Ì¬´úÂë¿é");
-//        }
-//        public static void main(String[] args) {
-//            System.out.println("---start---");
-//            new HelloB();
-//            new HelloB();
-//            System.out.println("---end---");
-//        }
-//}
-//
-
-//ÊµÏÖ£º±È½Ï¼¸ÖÖ´úÂë¿éµÄÖ´ĞĞË³Ğò£ºÆÕÍ¨´úÂë¿é£¬£¬¹¹Ôì¿é£¬¾²Ì¬´úÂë¿é
-//class A{
-//    public  A(){
-//        System.out.println("A.ÆÕÍ¨´úÂë¿é");
-//    }
-//    {
-//        System.out.println("A.¹¹Ôì¿é");
-//    }
-//    static {
-//        System.out.println("A.¾²Ì¬¿é");
-//    }
-//
-//}
-//class B extends A{
-//    public void B(){
-//        System.out.println("B.ÆÕÍ¨´úÂë¿é");
-//    }
-//    {
-//        System.out.println("B.¹¹Ôì¿é");
-//    }
-//    static {
-//        System.out.println("B.¾²Ì¬¿é");
-//    }
-//
-//}
-//
-//
-//class Test{
-//    public static void main(String[] args) {
-//        System.out.println("*******start*******");
-//        new B();
-//        new B();
-//        System.out.println("*******end*******");
-//    }
-//}
-
-
-//ÄÚÍâ²¿Àà£¬¹Û²ì´òÓ¡Ë³Ğò
+//å†…å¤–éƒ¨ç±»ï¼Œè§‚å¯Ÿæ‰“å°é¡ºåº
 //class Outer {
 //    private String msg = "Hello World";
 //
 //    static {
-//        System.out.println("ÎÒµÚÒ»¸ö´òÓ¡");
+//        System.out.println("æˆ‘ç¬¬ä¸€ä¸ªæ‰“å°");
 //    }
 //
 //    public Outer() {
-//        System.out.println("àÓàÓàÓ");
+//        System.out.println("å˜¤å˜¤å˜¤");
 //    }
 //
 //    {
-//        System.out.println("à«à«à«");
+//        System.out.println("å–ƒå–ƒå–ƒ");
 //    }
 //    public void he(){
-//        System.out.println("ºÇºÇºÇ");
+//        System.out.println("å‘µå‘µå‘µ");
 //    }
 //    public String getMsg(){
 //              return this.msg ;
@@ -992,14 +54,14 @@
 //    class Inner{
 //    private Outer out;
 //    static {
-//        System.out.println("ÔÚ¼ÌĞøàÓàÓàÓÖ®Ç°");
+//        System.out.println("åœ¨ç»§ç»­å˜¤å˜¤å˜¤ä¹‹å‰");
 //    }
 //        {
-//            System.out.println("ßËßËßË");
+//            System.out.println("å’šå’šå’š");
 //        }
 //    public  Inner(Outer out){
 //        this.out = out ;
-//        System.out.println("¼ÌĞøàÓàÓàÓ");
+//        System.out.println("ç»§ç»­å˜¤å˜¤å˜¤");
 //    }
 //    public void print(){
 //            System.out.println(out.getMsg());
@@ -1030,7 +92,7 @@
 //
 
 
-//Öµ´«µİ
+//å€¼ä¼ é€’
 
 //public class Test{
 //    public static void main(String[] args) {
@@ -1046,7 +108,7 @@
 //    }
 //}
 
-//ÒıÓÃ´«µİ
+//å¼•ç”¨ä¼ é€’
 //public class Test {
 //
 //    public static void Sample(StringBuffer a){
@@ -1073,7 +135,7 @@
 
 
 
-//Í¨¹ıÊı×éÊµÏÖÖµÖ®¼äµÄ½»»»
+//é€šè¿‡æ•°ç»„å®ç°å€¼ä¹‹é—´çš„äº¤æ¢
 //class Test{
 //
 //public static void swap(int []a){
@@ -1087,7 +149,7 @@
 //    a[0]=10;
 //    a[1]=20;
 //        swap(a);
-////´òÓ¡µÄÊÇÖ÷º¯ÊıÀïÃæÊı×éµÄÖµ£¬ÓëÉÏÃæĞÎ²ÎÎŞ¹Ø
+////æ‰“å°çš„æ˜¯ä¸»å‡½æ•°é‡Œé¢æ•°ç»„çš„å€¼ï¼Œä¸ä¸Šé¢å½¢å‚æ— å…³
 //        System.out.println(a[0]);
 //        System.out.println(a[1]);
 //
@@ -1095,7 +157,7 @@
 //}
 
 
-//Í¨¹ıÊı×é½»»»ÊıÖµ
+//é€šè¿‡æ•°ç»„äº¤æ¢æ•°å€¼
 //class Test {
 //
 //    public static void swap(int[] d) {
@@ -1114,18 +176,18 @@
 //        System.out.println("---------------");
 //        System.out.println(a[0]);
 //       System.out.println(a[1]);
-//       //ÏÂÃæµÄ´úÂëÊ±±àÒë²»¹ıµÄ£¬ĞÎ²ÎÖĞµ¥¶«Î÷ÔÚĞÎ²ÎËùÔÚº¯ÊıÖ´ĞĞÍê±Ïºó£¬±ã±»javaÀ¬»øÄÚ´æ»ØÊÕÕ¾»ØÊÕÁË
-//        //´Ë´úÂëËù×öµÄÊÂÇé£¬ÊÇÍ¨¹ıÉÏÃæĞÎ²Îº¯Êı½»»»Êµ²ÎÀïÃæÊı×éÄÚµÄÁ½¸öÖµ¡£
+//       //ä¸‹é¢çš„ä»£ç æ—¶ç¼–è¯‘ä¸è¿‡çš„ï¼Œå½¢å‚ä¸­å•ä¸œè¥¿åœ¨å½¢å‚æ‰€åœ¨å‡½æ•°æ‰§è¡Œå®Œæ¯•åï¼Œä¾¿è¢«javaåƒåœ¾å†…å­˜å›æ”¶ç«™å›æ”¶äº†
+//        //æ­¤ä»£ç æ‰€åšçš„äº‹æƒ…ï¼Œæ˜¯é€šè¿‡ä¸Šé¢å½¢å‚å‡½æ•°äº¤æ¢å®å‚é‡Œé¢æ•°ç»„å†…çš„ä¸¤ä¸ªå€¼ã€‚
 //       // System.out.println(d[0]);
 //        //System.out.println(d[1]);
 //
 //    }
 //}
 
-////java Öµ´«µİ£¬½»»»Á½¸ö±äÁ¿µÄÖµ£¬Ã»ÓĞ³É¹¦
+////java å€¼ä¼ é€’ï¼Œäº¤æ¢ä¸¤ä¸ªå˜é‡çš„å€¼ï¼Œæ²¡æœ‰æˆåŠŸ
 //public class Test {
 //
-//    //½»»»Á½¸ö±äÁ¿µÄÖµ
+//    //äº¤æ¢ä¸¤ä¸ªå˜é‡çš„å€¼
 //
 //    public static void Swap(int a,int b){
 //
@@ -1162,7 +224,7 @@
 //}
 //
 
-//Í¨¹ı¶ÔÏó µÄÖµµÄ½»»»
+//é€šè¿‡å¯¹è±¡ çš„å€¼çš„äº¤æ¢
 
 //class Te{
 //    int x;
@@ -1180,9 +242,9 @@
 //
 //    public static void main(String[] args)  {
 //        Te test=new Te(1);
-//        System.out.println("½»»»ÖµÖ®Ç°£º"+test.x);
+//        System.out.println("äº¤æ¢å€¼ä¹‹å‰ï¼š"+test.x);
 //        change(test, 4);
-//        System.out.println("½»»»ÖµÖ®ºó£º"+test.x);
+//        System.out.println("äº¤æ¢å€¼ä¹‹åï¼š"+test.x);
 //    }
 //    public static void change(Te test1,int x){
 //        test1.x=x;
@@ -1190,24 +252,24 @@
 //}
 
 
-//¹Û²ì×ÓÀà¶ÔÏó´´½¨£¬×¢ÒâÖ´ĞĞË³Ğò
+//è§‚å¯Ÿå­ç±»å¯¹è±¡åˆ›å»ºï¼Œæ³¨æ„æ‰§è¡Œé¡ºåº
 //class Person{
 //
 //    public Person(int i){
 //        System.out.println(i);
 //         i=0;
-//        System.out.println("**PersonÀà¶ÔÏó²úÉú**");
+//        System.out.println("**Personç±»å¯¹è±¡äº§ç”Ÿ**");
 //        i++;
 //        System.out.println(i);
 //    }
 //}
 //class Student extends Person{
 //    public Student(int i){
-//      super( i) ; //ÈôÎŞ²ÎÊıÊ±£¬´ËÓï¾äÔÚÎŞ²ÎÊ±Ğ´ÓÚ²»Ğ´Ò»Ñù×¢Òâ£º
-// //Êµ¼ÊÉÏÔÚ×ÓÀàµÄ¹¹Ôì·½·¨Ö®ÖĞ£¬Ïàµ±ÓÚÒşº¬ÁËÒ»¸öÓï¾ä super();
-// //Í¬Ê±ĞèÒª×¢ÒâµÄÊÇ£¬Èç¹û¸¸ÀàÀïÃ»ÓĞÌá¹©ÎŞ²Î¹¹Ôì£¬
-// //ÄÇÃ´Õâ¸öÊ±ºò¾Í±ØĞëÊ¹ÓÃsuper()Ã÷È·Ö¸Ã÷ÄãÒªµ÷ÓÃµÄ¸¸Àà¹¹Ôì ·½·¨
-//               System.out.println("**StudentÀà¶ÔÏó²úÉú**");
+//      super( i) ; //è‹¥æ— å‚æ•°æ—¶ï¼Œæ­¤è¯­å¥åœ¨æ— å‚æ—¶å†™äºä¸å†™ä¸€æ ·æ³¨æ„ï¼š
+// //å®é™…ä¸Šåœ¨å­ç±»çš„æ„é€ æ–¹æ³•ä¹‹ä¸­ï¼Œç›¸å½“äºéšå«äº†ä¸€ä¸ªè¯­å¥ super();
+// //åŒæ—¶éœ€è¦æ³¨æ„çš„æ˜¯ï¼Œå¦‚æœçˆ¶ç±»é‡Œæ²¡æœ‰æä¾›æ— å‚æ„é€ ï¼Œ
+// //é‚£ä¹ˆè¿™ä¸ªæ—¶å€™å°±å¿…é¡»ä½¿ç”¨super()æ˜ç¡®æŒ‡æ˜ä½ è¦è°ƒç”¨çš„çˆ¶ç±»æ„é€  æ–¹æ³•
+//               System.out.println("**Studentç±»å¯¹è±¡äº§ç”Ÿ**");
 //        System.out.println(i);
 //           }
 //}
@@ -1218,7 +280,7 @@
 //}
 //
 //
-//Àí½â´úÂëµÄÖ´ĞĞË³Ğò
+//ç†è§£ä»£ç çš„æ‰§è¡Œé¡ºåº
 //class Person{
 //    {
 //          String  name=" Tommy";
@@ -1250,16 +312,16 @@
 //}
 
 
-//*****·½·¨ÖØĞ´£º×ÓÀàÖØĞ´µÄ·½·¨²ÎÊıÀàĞÍ£¬Ãû³Æ£¬¸öÊı·µ»ØÀàĞÍÍêÈ«ÏàÍ¬£¬Í¬Ê±¸²Ğ´·½·¨µÄ·ÃÎÊÈ¨ÏŞ²»ÄÜ±È¸¸Àà¸üÑÏ¸ñ
+//*****æ–¹æ³•é‡å†™ï¼šå­ç±»é‡å†™çš„æ–¹æ³•å‚æ•°ç±»å‹ï¼Œåç§°ï¼Œä¸ªæ•°è¿”å›ç±»å‹å®Œå…¨ç›¸åŒï¼ŒåŒæ—¶è¦†å†™æ–¹æ³•çš„è®¿é—®æƒé™ä¸èƒ½æ¯”çˆ¶ç±»æ›´ä¸¥æ ¼
 
 
-//ÊôĞÔÖØĞ´£¬ÈôÊôĞÔÃ»ÓĞ±»ÓÃprivate´Ê»ãĞŞÊÎ£¬ÄÇÃ´²ÅÈ¥¾Í½üÔ­Ôò£¬Ñ¡Ôñ¾Í½ü±»¸²¸ÇµÄÊôĞÔ
+//å±æ€§é‡å†™ï¼Œè‹¥å±æ€§æ²¡æœ‰è¢«ç”¨privateè¯æ±‡ä¿®é¥°ï¼Œé‚£ä¹ˆæ‰å»å°±è¿‘åŸåˆ™ï¼Œé€‰æ‹©å°±è¿‘è¢«è¦†ç›–çš„å±æ€§
 //class Person{
 //    public String info = "Person";
 //}
 //
 //class Student extends Person{
-//    // °´ÕÕ¾Í½üÈ¡ÓÃÔ­Ôò£¬¿Ï¶¨ÕÒ±»¸²¸ÇµÄÊôĞÔ¡£
+//    // æŒ‰ç…§å°±è¿‘å–ç”¨åŸåˆ™ï¼Œè‚¯å®šæ‰¾è¢«è¦†ç›–çš„å±æ€§ã€‚
 //   public String info = "Student";
 // }
 // public class Test{
@@ -1275,9 +337,9 @@
 //}
 //
 //class Student extends Person{
-//    //ÓëÉÏÉÏÉÏ¸ö´úÂë³ÌĞòÇø·Ö¿ª£¬ÏÂÁĞ²¢·Ç¹¹Ôì·½·¨£¬
-//    // ËùÒÔÃ»ÓĞ new student();->public Student(){}->super()->public Person(){}
-//    //µ«ÊÇĞ´·¨ÀàËÆ new student().print()->public void print(){}->super.print()
+//    //ä¸ä¸Šä¸Šä¸Šä¸ªä»£ç ç¨‹åºåŒºåˆ†å¼€ï¼Œä¸‹åˆ—å¹¶éæ„é€ æ–¹æ³•ï¼Œ
+//    // æ‰€ä»¥æ²¡æœ‰ new student();->public Student(){}->super()->public Person(){}
+//    //ä½†æ˜¯å†™æ³•ç±»ä¼¼ new student().print()->public void print(){}->super.print()
 //    public void print(){
 //        super.print();
 //        System.out.println("2.I am child");
@@ -1290,16 +352,16 @@
 //}
 
 
-//*superµ÷ÓÃ¸¸ÀàÊôĞÔ
+//*superè°ƒç”¨çˆ¶ç±»å±æ€§
 //class Person{
-//    public String info = "°Ö°Ö£¡";
+//    public String info = "çˆ¸çˆ¸ï¼";
 //}
 //
 //class Student extends Person{
-//    public String info = "¶ù×Ó£¡" ;
+//    public String info = "å„¿å­ï¼" ;
 //
 //    public void print(){
-//        //²»ÕÒ±¾ÀàÖĞµÄÊôĞÔ
+//        //ä¸æ‰¾æœ¬ç±»ä¸­çš„å±æ€§
 //             System.out.println(super.info);
 //             System.out.println(this.info);
 //    }
@@ -1312,55 +374,8 @@
 
 
 
-//***ÔÚJavaÖĞfinal±»³ÆÎªÖÕ½áÆ÷¡£
-//***Ê¹ÓÃfinalĞŞÊÎÀà¡¢·½·¨¡¢ÊôĞÔ final³ÉÔ±±äÁ¿±ØĞëÔÚÉùÃ÷µÄÊ±ºò³õÊ¼»¯»òÕßÔÚ¹¹ÔìÆ÷ÖĞ³õÊ¼»¯£¬
-//***·ñÔò¾Í»á±¨±àÒë´íÎó Ê¹ÓÃfinal¶¨ÒåµÄÀà²»ÄÜÓĞ×ÓÀà(StringÀà±ãÊÇÊ¹ÓÃfinal¶¨Òå) finalÒ»µ©ĞŞÊÎÒ»¸öÀàÖ®ºó£¬
-//***¸ÃÀàµÄËùÓĞ·½·¨Ä¬ÈÏ¶¼»á¼ÓnalĞŞÊÎ¡£(²»°üº¬³ÉÔ±±äÁ¿)
 
-
-////½Ó¿ÚPerson
-//
-// interface Person {
-//    public void eat();
-//}
-//
-////ÊµÏÖÀàPeople
-//
-//// class People implements Person {
-////    private int a=0;
-////    @Override
-////    public void eat() {
-////        System.out.println("======"+a);
-////
-////    }
-////
-////}
-////
-//////×ÓÀàxiaoming£º
-////
-//// class xiaoming extends People {
-////    private String name;
-////
-////    @Override
-////    public void eat() {
-////        System.out.println("+++++++++");
-////    }
-////}
-////
-//////Ö÷º¯Êı
-////class  Test {
-////    public static void main(String[] args) {
-////        People p = new People();
-////        xiaoming x = new xiaoming();
-////        System.out.println(p instanceof Person);
-////        System.out.println(p instanceof xiaoming);
-////        System.out.println(x instanceof Person);
-////        System.out.println(x instanceof People);
-////    }
-////}
-////
-
-//Àí½âÖ´ĞĞË³Ğò
+//ç†è§£æ‰§è¡Œé¡ºåº
 //abstract class A{//5
 //    public A(){
 //        this.print() ;//6
@@ -1385,161 +400,11 @@
 //}
 
 
-//ÁíÍâ£¬³éÏóÀàÒ²·ÖÎªÍâ²¿³éÏóÀàºÍÄÚ²¿³éÏóÀà£¬Íâ²¿³éÏóÀàÎŞ·¨ÓÃstaticÀ´ĞŞÊÎ£¬¶øÄÚ²¿³éÏóÀà¿ÉÒÔÓÃstaticÀ´ĞŞÊÎ
-
-//Ä£°åÉè¼ÆÄ£Ê½£¬ocpÔ­Ôò£¬¿ª±ÕÔ­Ôò£¬ÒÔ¿§·È»úÀı×ÓÎªÀı
-
-//final±íÊ¾×îÖÕµÄÒâË¼£¬ËüĞŞÊÎµÄÀàÊÇ²»ÄÜ±»¼Ì³ĞµÄ£»finalĞŞÊÎµÄ·½·¨ÄÜ±»¼Ì³Ğ£¨MathÀàÀï¾ÍÓĞ£©£¬
-// µ«ÊÇ²»ÄÜ¹»±»ÖØĞ´¡£ÆäÊµ¹ØÏµ²¢²»¸´ÔÓ£¬ÄãÖ»ĞèÒª¼Ç×¡ÕâÑùÒ»¾ä»°£ºfinal¿ÉÓÃÓÚÉùÃ÷ÊôĞÔ¡¢·½·¨ºÍÀà£¬
-// ·Ö±ğ±íÊ¾ÊôĞÔ²»¿É±ä£¬·½·¨²»¿ÉÖØĞ´£¬Àà²»¿É¼Ì³Ğ¡£
-//µ«ÊÇfinalĞŞÊÎµÄ·½·¨¿ÉÒÔ±»·½·¨ÖØÔØ
-//×ÓÀàÏòÉÏ×ªĞÍÎª¸¸ÀàÊµÀı»¯¶ÔÏó£¬Èç¹û×ÓÀà¸²Ğ´ÁË¸¸ÀàµÄ·½·¨£¬ÔòÊµÀı»¯¶ÔÏóºó£¬ÒıÓÃ×ÓÀàµÄ·½·¨£¬Èç¹ûÃ»ÓĞ¸²Ğ´¸¸ÀàµÄ·½·¨
-//ÔòÊ¹ÓÃ¸¸ÀàµÄ·½·¨
 
 
-//·½·¨1
-//interface A
-//{
-//    static double PI = 3.14;
-//    abstract double area();
-//}
-//
-//interface B
-//{
-//    abstract void setColor(String c);
-//}
-//
-//interface C extends A,B
-//{
-//    abstract void volume();
-//}
-//
-//class Cylinder implements C
-//{
-//    double radius;
-//    int height;
-//    String color;
-//    public void setColor(String color)
-//    {
-//        this.color = color;
-//        System.out.println("The cylinder's color is "+color);
-//    }
-//    public void volume()
-//    {
-//        System.out.println("The cylinder's volume is "+PI* radius*radius* height);
-//    }
-//    public double area()
-//    {
-//        System.out.println("The cylinder's area is "+2*PI *radius*radius
-//                + 2*PI *radius*height);
-//        return 0;
-//    }
-//
-//}
-//
-//class Test
-//{
-//    public static void main(String[] args)
-//    {
-//        Cylinder cylinder = new Cylinder();
-//        //cylinder.color = "red";
-//        cylinder.height = 15;
-//        cylinder.radius = 3.3;
-//        cylinder.area();
-//        cylinder.setColor(cylinder.color = "red");
-//        cylinder.volume();
-//    }
-//}
+//**æŠ½è±¡ç±»çš„æ–¹æ³•ç”¨finalä¿®é¥°æ˜¯å› ä¸ºä¸æƒ³è®©å­ç±»è¦†ç›–è¿™ä¸ªæ–¹æ³•
 
-
-//·½·¨2
-//3.°´ÈçÏÂÒªÇó±àĞ´Java³ÌĞò£º
-//        £¨1£©¶¨Òå½Ó¿ÚA£¬ÀïÃæ°üº¬ÖµÎª3.14µÄ³£Á¿PIºÍ³éÏó·½·¨double area()¡£
-//        £¨2£©¶¨Òå½Ó¿ÚB£¬ÀïÃæ°üº¬³éÏó·½·¨void setColor(String c)¡£
-//        £¨3£©¶¨Òå½Ó¿ÚC£¬¸Ã½Ó¿Ú¼Ì³ĞÁË½Ó¿ÚAºÍB£¬ÀïÃæ°üº¬³éÏó·½·¨void volume()¡£
-//        £¨4£©¶¨ÒåÔ²ÖùÌåÀàCylinderÊµÏÖ½Ó¿ÚC£¬¸ÃÀàÖĞ°üº¬Èı¸ö³ÉÔ±±äÁ¿£ºµ×Ô²°ë¾¶radius¡¢
-//        Ô²ÖùÌåµÄ¸ßheight¡¢ÑÕÉ«color¡£
-//        £¨5£©´´½¨Ö÷ÀàÀ´²âÊÔÀàCylinder¡£
-//import java.util.Scanner;
-//class Test {
-//    public static void main(String[] args) {
-//        fangfa i = new fangfa();
-//        Cylinder s1 = new Cylinder();
-//        Cylinder s2 = new Cylinder();
-//        Cylinder s3 = new Cylinder();
-//
-//        System.out.print("Èİ»ı:");
-//        i.shixian(s1, 5.0, 6.0);
-//        System.out.print("Ãæ»ı:");
-//        i.shixian1(s2, 5.0);
-//        System.out.println("ÄãÏëÒªÊ²Ã´ÑÕÉ«µÄÈİÆ÷£¿");
-//        Scanner scanner = new Scanner(System.in);
-//        //nextineÖĞµÄL×¢Òâ´óĞ´
-//        String str1 = scanner.nextLine();
-//        String color = str1;
-//        while (true) {
-//            if (str1.equals(null)) {
-//                System.out.println("ÖØĞÂÊäÈë");
-//                continue;
-//            } else {
-//
-//                System.out.print("ÎÒÏëÒª:");
-//                //½«str±äÁ¿´«¸ø×Ö·û´®£¬²»ĞèÒªÓÃË«ÒıºÅ½«±äÁ¿°üÆğÀ´
-//                i.shixian2(s3, str1);
-//                break;
-//            }
-//
-//        }
-//
-//    }
-//}
-//class Cylinder implements C{
-//    public double volume(double radius,double height) {
-//        return radius * radius * pi * height;
-//    }
-//    public double area(double radius1){
-//        return radius1*radius1*pi;
-//    }
-//    public String setcolor(String color){
-//        return color;
-//    }
-//
-//
-//}
-//class fangfa{
-//    public double shixian(C per,double radius,double height){
-//        System.out.println(per.volume(radius,height));
-//        return 1;
-//
-//    }
-//    public double shixian1(C per1,double radius1){
-//        System.out.println(per1.area(radius1));
-//        return 2;
-//    }
-//    public String shixian2(C per2,String color){
-//        System.out.println(per2.setcolor(color));
-//        return "hehe";
-//    }
-//}
-//interface A{
-//    public static double pi=3.14;
-//     double area(double radius1);
-//
-//}
-//interface B{
-//    String setcolor(String color);
-//
-//}
-//
-//interface C extends A,B{
-//    double volume(double radius,double height);
-//
-//}
-
-
-//**³éÏóÀàµÄ·½·¨ÓÃfinalĞŞÊÎÊÇÒòÎª²»ÏëÈÃ×ÓÀà¸²¸ÇÕâ¸ö·½·¨
-
-////×Ô¶¨ÒåÒì³£Àà
+////è‡ªå®šä¹‰å¼‚å¸¸ç±»
 //class AddException extends Exception{
 //    public AddException(String msg){
 //        super(msg);
@@ -1552,217 +417,11 @@
 //        int num1=20;
 //        int num2=30;
 //        if(num1+num2==50){
-//            throw new AddException("´íÎóµÄÏà¼Ó");
+//            throw new AddException("é”™è¯¯çš„ç›¸åŠ ");
 //
 //        }
 //    }
 //
 //}
 
-//catch(Exception e){e.printStackTrace()}
 
-
-//µ¥ÀıÄ£Ê½
-//class Singleton{
-//    // ÔÚÀàµÄÄÚ²¿¿ÉÒÔ·ÃÎÊË½ÓĞ½á¹¹£¬ËùÒÔ¿ÉÒÔÔÚÀàµÄÄÚ²¿²úÉúÊµÀı»¯¶ÔÏó
-//   private static Singleton instance = new Singleton() ;
-//   private Singleton() {
-//       // privateÉùÃ÷¹¹Ôì
-//         }
-//         public static Singleton getInstance() {
-//       return instance ;
-//   }
-//   public void print() {
-//       System.out.println("Hello World");
-//   }
-//}
-// class SingletonTest {
-//    public static void main(String[] args) {
-//        Singleton singleton = null ; // ÉùÃ÷¶ÔÏó
-//            singleton = Singleton.getInstance() ;
-//            singleton.print();
-//    }
-//}
-
-
-//¶öººÊ½µ¥ÀıÄ£Ê½
-//class Singleton{
-//    // ÔÚÀàµÄÄÚ²¿¿ÉÒÔ·ÃÎÊË½ÓĞ½á¹¹£¬ËùÒÔ¿ÉÒÔÔÚÀàµÄÄÚ²¿²úÉúÊµÀı»¯¶ÔÏó
-//      private final static Singleton INSTANCE = new Singleton() ;
-//      private Singleton() {
-//          // privateÉùÃ÷¹¹Ôì
-//           }
-//           public static Singleton getInstance() {
-//          return INSTANCE ;
-//      }
-//      public void print() {
-//          System.out.println("Hello World");
-//      }
-//      }
-//
-//class SingletonTest {
-//     public static void main(String[] args) {
-//         Singleton singleton = null; // ÉùÃ÷¶ÔÏó
-//         singleton = Singleton.getInstance();
-//         singleton.print();
-//
-//     }
-// }
-
-//¶öººÊ½µ¥Àı
-//class Singleton{
-//    private static Singleton instance ;
-//    private Singleton() {
-//        // privateÉùÃ÷¹¹Ôì
-//         }
-//         public static Singleton getInstance() {
-//        if (instance==null) {
-//            // ±íÊ¾´ËÊ±»¹Ã»ÓĞÊµÀı»¯
-//                    instance = new Singleton() ;
-//        }        return instance ;
-//    }
-//    public void print() {
-//        System.out.println("Hello World");
-//    }
-//}
-//class SingletonTest {
-//    Object
-//    public static void main(String[] args) {
-//        Singleton singleton = null ; // ÉùÃ÷¶ÔÏó
-//           singleton = Singleton.getInstance() ;
-//           singleton.print();
-//    }
-//}
-
-//ÀÁººÊ½´æÔÚ¶àÏß³Ì°²È«ÎÊÌâ£¬¶ø¶öººÊ½²»»á¡££©
-//µ¥ÀıÄ£Ê½ÊÇÒ»¸öÖØµã£¬ÖØµã£¬ÖØµã¡£ËäÈ»´úÂëÁ¿²»´ó£¬µ«ÊÇ¸ÅÄîÓÃµ½µÄºÜ¶à¡£
-
-//µ¥ÀıÉè¼ÆÄ£Ê½
-//class Test{
-//    public static void main(String[] args) {
-//        singleton s1=singleton.getinstance();
-//        singleton s2=singleton.getinstance();
-//        System.out.println(s1);
-//        System.out.println(s2);
-//
-//    }
-//}
-//class singleton{
-//
-// private final static singleton per=new singleton();
-//    private singleton (){};
-//ÏÂÃæÕâ¸öÈ¡µÃÄÚ²¿ÀàÊµÀı¶ÔÏóµÄgetinstance·½·¨Ç°Ãæ±ØĞëÓĞÀàsingletonĞŞÊÎ£¬·ñÔò±àÒë»á±¨´í£¬java·½·¨ÉùÃ÷ÎŞĞ§£¬ĞèÒª·µ»Ø
-//ÀàĞÍ
-//    public  static singleton getinstance(){
-//        return per;
-//    }
-//
-//}
-
-
-
-//µ¥ÀıÉè¼ÆÄ£Ê½
-//class Singleton{
-//    // ÔÚÀàµÄÄÚ²¿¿ÉÒÔ·ÃÎÊË½ÓĞ½á¹¹£¬ËùÒÔ¿ÉÒÔÔÚÀàµÄÄÚ²¿²úÉúÊµÀı»¯¶ÔÏó
-//    static Singleton instance = new Singleton() ;
-//    private Singleton() {
-//        // privateÉùÃ÷¹¹Ôì
-//    }
-//    public void print() {
-//        System.out.println("Hello World");
-//    }
-//}
-//class SingletonTest {
-//    public static void main(String[] args) {
-//        Singleton singleton = null ;
-//        // ÉùÃ÷¶ÔÏó
-//        singleton = Singleton.instance ;
-//        singleton.print();
-//    }
-//}
-
-
-//IntegerµÄ×Ô¶¯²ğ×°Ïä  ×Ôjava1.5Ö®ºóÒıÈëÁË×Ô¶¯²ğ×°Ïä
-//class Test{
-//    public static void main(String[] args) {
-//        //×Ô¶¯×°Ïä
-//        Integer integer=10;
-//        //×Ô¶¯²ğÏä
-//        System.out.println(integer+10);
-//    }
-//}
-
-
-//°¢ÀïÃæÊÔÌâ £¬ÅĞ¶ÏintergerµÄÁ½¸öÖµÊÇ·ñÏàÍ¬
-//class Test{
-//    public static void main(String[] args) {
-//        //ÒıÈë³£Á¿³ØµÄ¸ÅÄî£¬µ±IntergerµÄÖµÔÚ[-127£¬128)Ö®¼äÊ±ºò£¬Interger²»±Ø¿ª±ÙĞÂµÄ¿Õ¼äÈ¥¸øĞÂµÄ±äÁ¿¸³Öµ£¬¶øÊÇ
-//        //ÒıÈë³£Á¿³ØµÄ¸ÅÄî£¬Ö±½Ó´Ó³£Á¿³ØÖĞÈ¥ÕÒ-218µ½127Ö®¼äµÄÖµ¸³¸øĞÂµÄ±äÁ¿£¬ÄÇÃ´µØÖ·Ò²±ØÈ»ÊÇÒ»ÑùµÄ
-//        //equals±ÈµÄÊÇÖµµÄ´óĞ¡£¬==±È½ÏµÄÊÇµØÖ·
-//        Integer a=1279;
-//        Integer b=1279;
-//        System.out.println(a.equals(b));
-//    }
-//}
-
-//Ğ´Ò»¸ö¼òµ¥µÄ¹¤³§Ä£Ê½Éè¼Æ
-//²âÊÔÀà
-//class Test{
-//    public static void main(String[] args) {
-//
-//    }
-//
-//}
-//ÓÃ½Ó¿ÚÊµÏÖ
-
-//interface Icomputer{
-//     abstract void print(String per){};
-//}
-//class factory{
-//
-//}
-//class lenovo implements Icomputer{
-//    public lenovo get(String per){
-//        lenovo per1=new lenovo();
-//        String str="lenovo";
-//
-//        return per1.str;
-//    }
-//}
-//class acer implements Icomputer{
-//
-//}
-//class Deil implements Icomputer{
-//
-//}
-
-//Á·Ï°
-//class Test{
-//    public static void main(String[] args) {
-//        tom per=new tom();
-//        per.fangfa(6);
-//        System.out.println(tom.n);
-//
-//    }
-//}
-//class tom{
-//    static  Integer n=100;
-//    public tom(){
-//
-//    }
-//    public static Integer fangfa(Integer n){
-//        //System.out.println(n);
-//        //System.out.println(this.n);
-//        //return this.n;
-//        return 1;
-//    }
-//}
-
-
-
-
-//ÑéÖ¤¾²Ì¬·½·¨¿ÉÒÔ²»Ö±½ÓÊµÀı»¯¶ÔÏó£¬Í¨¹ıÀàÀ´µ÷ÓÃ
-//ÒÔ¼°ËäÈ»Í¨¹ıÖ÷·½·¨Ïñ¹¹Ôì·½·¨ÀïÃæ´«µİ²ÎÊı£¬µ«ÊÇÔÚÀàÀïÃæÈô¶¨ÒåÁË¸ÃÊôĞÔµÄ²ÎÊı£¬ÄÇÃ´this.ÊôĞÔµÄÖµÒÀÈ»»¹ÊÇÀàÀïÃæ³õÊ¼»¯µÄÖµ
-
-
-//
