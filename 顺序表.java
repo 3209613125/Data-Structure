@@ -103,7 +103,7 @@ public class MySequenceImpl implements ISequence {
     }
 
     @Override
-    //删除第一次出现的关键字key，不是删除key位置上的元素
+    //删除第一次出现的关键字key，不是则删除key位置上的元素
     public Object remove(Object key) {
         //获取值为key的索引
         int index = search(key);
