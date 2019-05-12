@@ -1,5 +1,3 @@
-package com.ys.datastructure;
-
 public class StackSingleLink {
     private SingleLinkedList link;
     
