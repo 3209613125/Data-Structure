@@ -2,7 +2,11 @@ package www.bit;
 
 import java.util.Arrays;
 
-class Test1 {
+class Test3 {
+//    static class Person{
+//        public Person() {
+//        }
+//    }
     public static void main(String[] args) throws InterruptedException {
         MySequenceImpl mySequence = new MySequenceImpl();
 
