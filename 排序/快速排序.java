@@ -27,7 +27,7 @@ class QuickSort {
         QuickSort(arr,j+1,high);
     }
     public static void main(String[] args){
-        System.out.println("请输入十个数字");
+        System.out.println("请输入十个整形数");
         Scanner scanner=new Scanner(System.in);
         int[] arr=new int[10];
         for(int i=0;i<arr.length;i++){
