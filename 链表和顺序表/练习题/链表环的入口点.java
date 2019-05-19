@@ -1,4 +1,4 @@
- //链表的环的入口点
+ //链表的环的初始入口点
     public Node detectCycle() {
         Node fast = this.head;
         Node slow = this.head;
