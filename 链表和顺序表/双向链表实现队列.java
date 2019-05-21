@@ -1,5 +1,3 @@
-package com.ys.link;
-
 public class QueueLinkedList {
     
     private DoublePointLinkedList dp;
