@@ -43,3 +43,41 @@ import java.util.*;
         count(s,n-1);
     }
 }
+
+
+
+//方法2：
+
+import java.util.*;
+ class Main {
+    public static void main(String[] args) {
+        System.out.println(solution(40));
+    }
+    private static int solution(int m){//m代表总体积
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] p = new int[n+1];//p[i]表示第i个物品的体积
+        int[][] dp = new int[n+1][m+1];//dp[i][j]表示前i个物品可以凑成j的总方式
+        for(int i=1; i<=n; i++){
+            p[i] = sc.nextInt();
+        }
+//前i个物品凑成0的方案只有一种
+        for(int i=0; i<=n; i++){
+            dp[i][0] = 1;
+        }
+//前0个物品凑成j的方案有0种
+        for(int j=1; j<=m; j++){
+            dp[0][j] = 0;
+        }
+        for(int i=1;i<=n; i++){
+            for(int j=0; j<=m; j++){
+                if(p[i] <= j){//拿或不拿这个物品
+                    dp[i][j] = dp[i-1][j] + dp[i-1][j-p[i]];
+                }else{//这个物品大于凑成的体积，只能选择不拿
+                    dp[i][j] = dp[i-1][j];
+                }
+            }
+        }
+        return dp[n][m];
+    }
+}
