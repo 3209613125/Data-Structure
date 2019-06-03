@@ -1,5 +1,3 @@
-import javax.xml.stream.events.NotationDeclaration;
-
 class TestDemo1 {
 
     public static void main(String[] args) {
@@ -40,6 +38,7 @@ class TestDemo1 {
      }//节点类
 
      private Node head;
+      //构造方法(无参)
      public MySingleListImpl() {
          this.head = null;
      }
@@ -141,6 +140,7 @@ class TestDemo1 {
      }
 
      @Override
+      //删除给定data的对应节点，若有多个，只删除第一个
      public int remove(int key) {
          if(this.head == null) {
              throw new UnsupportedOperationException("单链表为空");
@@ -220,146 +220,7 @@ class TestDemo1 {
          }
          this.head = null;
      }
-     //反转一个单链表
-     public Node reverseList()  {
-         Node reverseHead = null;//反转后新的头结点
-         Node cur = this.head;//cur代表当前需要反转的节点
-         Node prev = null;//cur的前驱--》前驱信息
-         while(cur != null) {
-             Node curNext = cur.next;
-             if(curNext == null) {
-                 reverseHead = cur;
-             }
-             cur.next = prev;
-             prev = cur;
-             cur = curNext;
-         }
-         return reverseHead;
-     }
-     //打印指定节点开始的数据
-     public void show(Node newHead) {
-         Node cur = newHead;
-         while(cur != null) {
-             System.out.print(cur.data+" ");
-             cur = cur.next;
-         }
-         System.out.println();
-     }
-     //找到单链表的中间节点
-     public Node middleNode() {
-         Node cur = this.head;
-         int len = getLength()/2;
-         for (int i = 0; i < len; i++) {
-             cur = cur.next;
-         }
-         return cur;
-     }
-
-     public Node findKthToTail(int k) {
-         if(this.head == null || k <= 0){// k > getLength()
-             return null;
-         }
-         Node fast = this.head;
-         Node slow = this.head;
-         while(k-1 > 0) {//3    5
-             if(fast.next != null) {
-                 fast = fast.next;
-                 k--;
-             }else {
-                 System.out.println("没有这个节点");
-                 return null;
-             }
-         }
-         //一起走
-         while(fast.next != null) {
-             slow = slow.next;
-             fast = fast.next;
-         }
-         return slow;
-     }
-
-     public Node partition(int x) {
-         Node beforeStart = null;
-         Node beforeEnd = null;
-         Node afterStart = null;
-         Node afterEnd = null;
-         Node pHead = this.head;
-         while(pHead != null) {
-             Node pHeadNext = pHead.next;
-             pHead.next = null;
-             if(pHead.data < x) {
-                 if(beforeStart == null) {
-                     beforeStart = pHead;
-                     beforeEnd = beforeStart;
-                 }else {
-                     beforeEnd.next = pHead;
-                     beforeEnd = pHead;
-                 }
-             }else {
-                 if(afterStart == null) {
-                     afterStart = pHead;
-                     afterEnd = afterStart;
-                 }else {
-                     afterEnd.next = pHead;
-                     afterEnd = afterEnd.next;
-                 }
-             }
-             pHead = pHeadNext;
-         }
-         if(beforeStart == null) {
-             return afterStart;
-         }
-         beforeEnd.next = afterStart;//单链表进行拼接
-         return beforeStart;
-     }
-
-     //单链表是否有环
-     public void createLoop() {
-         Node cur = this.head;
-         while(cur.next != null) {
-             cur = cur.next;
-         }
-         cur.next = this.head.next.next;
-     }
-
-     public boolean hasCycle() {
-         Node fast = this.head;
-         Node slow = this.head;
-         while(fast != null && fast.next != null) {
-             fast = fast.next.next;
-             slow = slow.next;
-             if(fast == slow) {
-                 //return true;
-                 break;
-             }
-         }
-         if(fast != null && fast.next != null) {
-             return true;
-         }
-         return false;
-     }
-     //链表的环的入口点
-     public Node detectCycle() {
-         Node fast = this.head;
-         Node slow = this.head;
-         while(fast != null && fast.next != null) {
-             fast = fast.next.next;
-             slow = slow.next;
-             if(fast == slow) {
-                 break;
-             }
-         }
-         //没有环  返回null
-         if(fast == null || fast.next == null){
-             return null;
-         }
-         slow = this.head;
-         while(fast != slow) {
-             fast = fast.next;
-             slow = slow.next;
-         }
-         return slow;
-     }
+   
  }
 
 
