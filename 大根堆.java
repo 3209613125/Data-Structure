@@ -63,14 +63,28 @@ public class TestHeap implements IHeap{
         }
     }
 
-    @Override
+ @Override
     public void AdjustUp(int child, int len) {
+        int parent = (child-1)/2;
+        while (child>0){
+            if(this.elem[child]>this.elem[parent]) {
+                int tmp = this.elem[child];
+                this.elem[child] = this.elem[parent];
+                this.elem[parent] = tmp;
+                child = parent;
+                parent = (child-1)/2;
 
-    }
+            }else{
+                    break;
+                }
+            }
+        }
 
-    @Override
+     @Override
     public void pushHeap(int item) {
-
+        if(isFull()){
+            this.elem = Arrays.copyOf(this.elem,2*this.elem.length);
+        }
     }
 
     @Override
@@ -82,10 +96,30 @@ public class TestHeap implements IHeap{
     public int getHeapTop() {
         return 0;
     }
+    
+    public boolean isEmpty(){
+        return  this.usedSize==0;
+}
+    
+     private boolean isFull(){
+        return  this.usedSize == this.elem.length;
+    }
+
 
     @Override
+    //时间复杂度：n*log 2 n
+    //空间复杂度：O（1）
+    //稳定性：不稳定
     public void HeapSort() {
+        int end = this.usedSize-1;
+        while (end>0){
+            int tmp = elem[0];
+            elem[0]=elem[end];
+            elem[end]=tmp;
+            AdjustDown(0,end);
+            end--;
 
+        }
     }
 
     @Override
