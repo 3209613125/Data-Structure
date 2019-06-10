@@ -1,6 +1,3 @@
-链接：https://www.nowcoder.com/questionTerminal/987123efea5f43709f31ad79a318ca69
-来源：牛客网
-
 读入N名学生的成绩，将获得某一给定分数的学生人数输出。
 
 输入描述:
