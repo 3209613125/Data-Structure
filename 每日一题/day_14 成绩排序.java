@@ -19,6 +19,8 @@ public class Main{
                 }
                 lists[grade].addLast(name);
             }
+                
+                //升序排列
             if(ascOrDesc==1){
                 for(int i = 0;i<=100;i++){
                     if(lists[i]!=null){
@@ -28,6 +30,7 @@ public class Main{
                     }
                 }
 
+               //降序排列
             }else{
                 for(int i = 100;i>=0;i--){
                     if(lists[i]!=null){
