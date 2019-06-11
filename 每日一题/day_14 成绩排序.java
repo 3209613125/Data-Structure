@@ -1,3 +1,5 @@
+//java桶排序算法复杂度，O(n)
+//101个桶，分别保存0~100分的学生的名称，然后按照ascOrDesc打印出来
 import java.util.Scanner;
         import java.util.LinkedList;
 
