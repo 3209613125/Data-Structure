@@ -31,3 +31,41 @@ class XIER{
         }
     }
 }
+
+
+--------------------------------------
+
+import java.util.Date;
+
+class Main {
+    public static void main(String[] args) {
+        int[] arr = {8,7,9,6,3,2,1,5,4};
+        insertSort(arr);
+    }
+    public static void insertSort(int[] array) {
+        long start = System.currentTimeMillis();
+        for (int i = 1; i < array.length; i++) {
+            int tmp = array[i];
+            int j = 0;
+            for (j = i - 1; j >= 0; j--) {
+                if (array[j] > tmp) {
+                    array[j + 1] = array[j];
+                } else {
+                    break;
+                }
+            }
+            array[j + 1] = tmp;
+        }
+        long end = System.currentTimeMillis();
+        for(int i:array){
+            System.out.print(i+" ");
+        }
+        System.out.println();
+        System.out.println("算法执行时间" + (end - start));
+        //前计算机时间和GMT时间(格林威治时间)1970年1月1号0时0分0秒所差的毫秒数。
+        System.out.println(System.currentTimeMillis());
+        long curtime = System.currentTimeMillis();
+        Date date =new Date(curtime);
+        System.out.println(date);
+    }
+}
