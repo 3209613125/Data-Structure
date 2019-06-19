@@ -30,7 +30,7 @@ class Solution{
 package www.bittech;
 
 //冒泡排序法
-//时间复杂度，o(n^2)
+//时间复杂度，最好情况:o(n)
 //空间复杂度:稳定
 class Solution{
     public static void main(String[] args) {
