@@ -1,3 +1,9 @@
+//当要快速排列的序列已经从小到大的序列排序好的话
+//快速排序就类似于冒泡排序，每次扫一个元素，且要遍历整个数组，时间复杂度为n^2;
+//时间复杂度最好为 nlogn，最坏为n^2
+//空间复杂度:logn，最坏为n
+//稳定性：不稳定，含有跳跃式交换
+
 import java.util.Scanner;
 class QuickSort {
     public static  void QuickSort(int[] arr,int low,int high){
