@@ -7,7 +7,7 @@
          else{
              int leftHeight = getHeight(root.left);
              int rightHeight = getHeight(root.right);
-             return Math.abs(leftHeight-rightHeight)<2
+             return Math.abs(leftHeight-rightHeight)<=1
                      &&isBanlanced(root.left)
                      &&isBanlanced(root.right);
          }
