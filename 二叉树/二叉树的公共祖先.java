@@ -1,4 +1,4 @@
-//二叉树的公共节点
+//二叉树的公共祖先
 public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
          if(root==null){
              return  null;
