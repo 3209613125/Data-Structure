@@ -6,8 +6,7 @@ public class Main{
         Scanner scan = new Scanner(System.in);
         while (scan.hasNextInt()){
             int num = scan.nextInt();
-            sum(num);
-            pow_sum(num);
+            System.out.println(sum(num)+" "+pow_sum(num));
         }
 
         scan.close();
