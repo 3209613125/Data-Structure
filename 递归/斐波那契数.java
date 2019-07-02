@@ -1,32 +1,20 @@
 //斐波那契数列
-//0 1 1 2 3 5 8
+//1 1 2 3 5 8
 //n=(n-1)+(n-2)
 //打印20以内斐波那契数列
-class Test {
 
+
+class Main{
     public static void main(String[] args) {
-//
-        feibo j=new feibo();
-       for (int n = 1; n < 20; n++) {
-            System.out.println(j.hh(n));
-       }
+        for(int i = 1;i<=20;i++){
+            System.out.print(feibo(i)+" ");
 
+        }
+    }
+    public static int feibo(int num){
+        if(num==1||num==2){
+            return 1;
+        }
+        return feibo(num-1)+feibo(num-2);
     }
 }
-   class feibo {
-
-
-     static int hh(int n) {
-
-            if (n == 2||n==1) {
-              return 1;
-            } else {
-        return hh(n - 2) + hh(n - 1);
-
-        }
-
-
-
-
-        }
-        }
