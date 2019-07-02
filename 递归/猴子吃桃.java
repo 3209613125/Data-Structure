@@ -3,30 +3,17 @@
 //以后每天早上都吃了前一天剩下   的一半零一个。到第10天早上想再吃时，见只剩下一个桃子了。
 //求第一天共摘了多少。
 //n,n/2,n/2-1,...,1
-class Test
-{
-    public static void main(String[] args)
-    {
-        System.out.println(total(1));
-        System.out.println(total(2));
-        System.out.println(total(3));
-        System.out.println(total(4));
-        System.out.println(total(5));
-        System.out.println(total(6));
-        System.out.println(total(7));
-        System.out.println(total(8));
-        System.out.println(total(9));
-        System.out.println(total(10));
+public class Main{
+    public static void main(String[] args) {
+        System.out.println(eat(10));
     }
-    static int total(int day)
-    {
-        if (day == 10)
-        {
-            return 1;
+    public static int eat(int day){
+        if(day== 10){
+            return  1;
         }
-        else
-        {
-            return (total(day + 1 )+1)* 2;
+        //10:1 (1+1)*2 (4+1)*2
+        else{
+            return (1+eat(day+1))*2;
         }
     }
 }
