@@ -1,4 +1,4 @@
-//Π的表示  Math.acos(-1)
+//Π的表示  Math.acos(-1)    Math.acos()用于返回double类型的反余弦值
 //开方  Math.sqrt()
 //平方 Math.pow()
 //保留几位小时 String.format("%.xf",double类型的小数)
