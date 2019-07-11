@@ -11,6 +11,7 @@ public class Main {
         String s2 = scanner.next().toUpperCase();
         char[] c1 = s1.toCharArray();
         char[] c2 = s2.toCharArray();
+        //set不允许有重复元素
         Set<Character> set1 = new LinkedHashSet<>();
         Set<Character> set2 = new LinkedHashSet<>();
         for (int i = 0; i < c1.length; i++) {
