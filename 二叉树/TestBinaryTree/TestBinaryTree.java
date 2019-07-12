@@ -1,6 +1,3 @@
-package www.bittech;
-
-
 import java.util.*;
  class Binarytree {
 
