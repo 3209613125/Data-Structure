@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+/*13:
+题目描述
+写出一个程序，接受一个十六进制的数值字符串，输出该数值的十进制字符串。（多组同时输入 ）
+输入描述:
+输入一个十六进制的数值字符串。
+输出描述:
+输出该数值的十进制字符串。
+输入例子:
+0xA
+输出例子:
+10*/
+class Ox2Shi {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        while(scanner.hasNextLine())
+        {
+            String string  = scanner.nextLine();
+            string = string.substring(2);
+            System.out.println(Func(string));;
+        }
+
+    }
+
+
+    private static int Func(String string) {
+        int count = 0;
+        char ch;
+        int result = 0;
+        int temp = 0;
+        while(count < string.length()){
+            ch = string.charAt(string.length()-count-1);
+            if(ch <='Z' && ch >='A'){
+                temp = ch - 'A' + 10;
+            }
+            else if(ch <= 'z' && ch >= 'a'){
+                temp = ch - 'a' + 10;
+            }
+            else if(ch <= '9' && ch >= '0'){
+                temp = ch - '0';
+            }
+            else break;
+            result += temp*Math.pow(16, count);
+            count++;
+        }
+        return result;
+    }
+
+}
