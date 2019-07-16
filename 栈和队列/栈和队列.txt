@@ -1,0 +1,3 @@
+栈和队列的peek()方法只会显示栈顶元素，并不会弹出
+栈 Stack push() pop()
+队列 Queue add() poll()
