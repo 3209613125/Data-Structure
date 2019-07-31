@@ -1,6 +1,9 @@
+
+import java.util.Stack;
+
 class QuictSort{
     public static void main(String[] args) {
-        int[] array = new int[]{6,5,4,9,8};
+        int[] array = new int[]{6,5,4,9,8,8,15};
         sort(array);
         for (int i : array){
             System.out.print(i+" ");
@@ -10,12 +13,12 @@ class QuictSort{
     public static int partation(int[] arrray,int low,int high) {
         int temp = arrray[low];
         while (low < high) {
-            while (low < high && arrray[high] > temp) {
+            while (low < high && arrray[high] >= temp) {
                 high--;
             }
             arrray[low] = arrray[high];
 
-            while (low < high && arrray[low] < temp) {
+            while (low < high && arrray[low] <= temp) {
                 low++;
             }
             arrray[high] = arrray[low];
