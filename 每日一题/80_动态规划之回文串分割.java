@@ -1,5 +1,5 @@
-参考该博主：https://blog.csdn.net/qq_41231926/article/details/85335825
-动态规划求解：
+//参考该博主：https://blog.csdn.net/qq_41231926/article/details/85335825
+//动态规划求解：
 
   public class Solution {
 	public int minCut(String s) {
