@@ -23,13 +23,7 @@ class Main {
         }
         System.out.println(buttle);
         System.out.println(emptybuttle);
-        System.out.println(count);
-
-    }
-}
-
-递归：
-class Main {
+        System.out.println(count);class Main {
     public static void main(String[] args) {
         int buttle = 8000;
         int emptybuttle = 0;
@@ -38,9 +32,9 @@ class Main {
 
     }
     public static int count(int emptybuttle,int buttle,int count1){
-        buttle--;
-        emptybuttle++;
-        count1++;
+//        buttle--;
+//        emptybuttle++;
+//        count1++;
 
         if (buttle==0&&emptybuttle==2){
             return count1;
@@ -49,7 +43,7 @@ class Main {
             emptybuttle = 0;
             buttle++;
         }
-        return count(emptybuttle,buttle,count1);
+        return count(emptybuttle+1,buttle-1,count1+1);
 
 
     }
@@ -57,3 +51,8 @@ class Main {
 
 
 }
+
+    }
+}
+
+递归：
