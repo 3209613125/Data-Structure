@@ -1,0 +1,16 @@
+字符串.contains(数组里某个元素/某个字符串) 返回的是一个布尔值
+
+对于二维数组的遍历打印：
+arr[3][3];
+for(int[] i : arr){
+for(int j : i){
+System.out.println(j);
+}
+System.out.println("-----------")
+}
+
+数组的填充，若不想循环赋值
+Arrays.fill(arr[0],1);
+打印结果将arr[0]，第一个数组里元素全部换成1
+若此时arr为一维数组，即int[] arr = new int[3];
+Arrays.fill(arr,1);
