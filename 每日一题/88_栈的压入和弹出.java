@@ -63,22 +63,22 @@ search(Object o) 表示的是返回对象在堆栈中的位置，以 1 为基数
 
 代码如下：
 
-import java.util.ArrayList;
 import java.util.Stack;
- 
+
 public class Solution {
     public boolean IsPopOrder(int [] pushA,int [] popA) {
-        Stack<Integer> s=new Stack<Integer>();
-        if(pushA.length==0||popA.length==0)//判断两个序列是否为空，为空返回false
+        Stack<Integer> stack = new Stack<>();
+        if (pushA.length == 0 || popA.length == 0){
             return false;
-        int flag=0;//标记出栈的顺序
-        for(int i=0;i<pushA.length;i++){
-            s.push(pushA[i]);
-            while(!s.empty()&&s.peek()==popA[flag]){//当栈不为空，且入栈栈顶元素和出栈栈顶元素相同时，才出栈
-                s.pop();
-                flag++;//出栈一次，出现序列向后移动一位，继续比较后边的元素
+        }
+        int flag = 0;
+        for (int i = 0; i < pushA.length; i++){
+            stack.push(pushA[i]);
+            while (!stack.isEmpty() && stack.peek() == popA[flag]){
+                stack.pop();
+                flag++;
             }
         }
-        return s.empty();
+        return stack.isEmpty();
     }
 }
