@@ -76,23 +76,13 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         treasure();
-
     }
     public static void treasure(){
         Scanner scanner = new Scanner(System.in);
-
         String str = scanner.nextLine();
-        char[] str_ = new char[str.length()];
-        for (int i = 0;i<str.length();i++){
-            str_[i] =  str.charAt(i);
-
-        }
+        char[] str_ = str.toCharArray();
         String str1 = scanner.nextLine();
-        char[] str1_ = new char[str1.length()];
-        for (int i = 0;i<str1.length();i++){
-            str1_[i] =  str1.charAt(i);
-
-        }
+        char[] str1_ = str1.toCharArray();
         List list = new ArrayList();
         for (int i = 0;i < str1_.length;i++){
             for (int j = 0;j < str_.length;j++){
@@ -111,7 +101,6 @@ public class Main {
             int num = str1_.length-list.size();
             System.out.println("No"+" "+num);
         }
-
     }
 }
 
