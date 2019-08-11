@@ -5,22 +5,25 @@
 请你帮可怜的程序员们自动转换变量名。
 
 import java.util.*;
-public class Main{
-    public static void main(String[] args){
-        Scanner scanner=new Scanner(System.in);
-        while(scanner.hasNext()){
-            String str=scanner.nextLine();
-// 先将字符串按 _ 切分
-            String[] words=str.split("_");
-            String result=words[0];
-            for(int i=1;i<words.length;i++){
-// 将首字母转为大写即可.
-                result+=(char)(words[i].charAt(0)-'a'+'A');
-                for(int j=1;j<words[i].length();j++){
-                    result+=words[i].charAt(j);
+public class Main {
+    public static void main(String[] args) {
+     strtransform();
+    }
+    public static void strtransform(){
+        Scanner scanner = new Scanner(System.in);
+        while (scanner.hasNext()){
+            String str = scanner.nextLine();
+            String[] str1 = str.split("_");
+            String str3 = str1[0];
+            for (int i = 1;i <str1.length;i++){
+                //char取得的字符，不能再用UpperCase方法
+                str3 += (char)(str1[i].charAt(0)-'a'+'A');
+                for (int j = 1;j < str1[i].length();j++){
+                    str3 += str1[i].charAt(j);
                 }
             }
-            System.out.println(result);
+            System.out.println(str3);
         }
     }
+
 }
