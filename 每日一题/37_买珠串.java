@@ -70,3 +70,48 @@ public class Main{
         }
     }
 }
+
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        treasure();
+
+    }
+    public static void treasure(){
+        Scanner scanner = new Scanner(System.in);
+
+        String str = scanner.nextLine();
+        char[] str_ = new char[str.length()];
+        for (int i = 0;i<str.length();i++){
+            str_[i] =  str.charAt(i);
+
+        }
+        String str1 = scanner.nextLine();
+        char[] str1_ = new char[str1.length()];
+        for (int i = 0;i<str1.length();i++){
+            str1_[i] =  str1.charAt(i);
+
+        }
+        List list = new ArrayList();
+        for (int i = 0;i < str1_.length;i++){
+            for (int j = 0;j < str_.length;j++){
+                if (str_[j] == str1_[i]){
+                    list.add(str1_[i]);
+                    str_[j] =(char) -1;
+                    break;
+                }
+            }
+        }
+        if (list.size() == str1_.length){
+            int num = str_.length-list.size();
+            System.out.println("Yes"+" "+num);
+        }
+        else {
+            int num = str1_.length-list.size();
+            System.out.println("No"+" "+num);
+        }
+
+    }
+}
+
