@@ -1,6 +1,6 @@
 //冒泡排序法
 //时间复杂度，o(n^2)
-//空间复杂度:稳定
+//空间复杂度:稳定的
 class Solution{
     public static void main(String[] args) {
         int[] arr = {9,8,4,6,5,7,3,2,1};
