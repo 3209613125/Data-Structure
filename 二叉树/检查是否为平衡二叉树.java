@@ -70,3 +70,25 @@ class Solution {
     }
    
 }
+
+public class Solution {
+    public boolean IsBalanced_Solution(TreeNode root) {
+        return getdepth(root) != -1;
+    }
+    public int getdepth(TreeNode root){
+        if(root == null){
+            return 0;
+        }
+        int left = getdepth(root.left);
+        if(left == -1){
+            return -1;
+        }
+            int right = getdepth(root.right);
+            if(right == -1){
+                return -1;
+            }
+        return Math.abs(left-right) > 1 ? -1:1+Math.max(left,right);
+        
+        
+    }
+}
