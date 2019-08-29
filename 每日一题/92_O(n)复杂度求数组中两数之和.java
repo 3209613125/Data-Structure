@@ -1,5 +1,8 @@
-//有序数组中，求两数之和等于给定的scanner数，并返回两个数的下标
-public class Main{
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+class Main{
     public static void main(String[] args) {
         int [] array = {1,2,3,4,50,7,8,12,13};
         Scanner scanner = new Scanner(System.in);
@@ -11,6 +14,7 @@ public class Main{
         }
     }
     public static void find(int start,int end,int x,int[] array){
+        List list = new ArrayList();
         int i = start;
         int j = end;
         while (i < j){
@@ -19,6 +23,8 @@ public class Main{
                     j--;
                 }
                 if (i < j && x== array[i] + array[j]){
+                   list.add(i);
+                   list.add(j);
                     System.out.println("array["+i+"]"+" "+"array["+j+"]");
                     j--;
                 }
@@ -28,13 +34,19 @@ public class Main{
                     i++;
                 }
                 if (i < j && x== array[i] + array[j]){
+                    list.add(i);
+                    list.add(j);
                     System.out.println("array["+i+"]"+" "+"array["+j+"]");
                     i++;
                 }
             }
         }
         if (array[i] == x){
+            list.add(i);
             System.out.println("array["+i+"]");
+        }
+        if (list.isEmpty()){
+            System.out.println("null");
         }
     }
 }
