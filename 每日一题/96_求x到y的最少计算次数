@@ -1,0 +1,67 @@
+链接：https://www.nowcoder.com/questionTerminal/45d04d4d047c48768543eeec95798ed6?orderByHotValue=1&page=1&onlyReference=false
+来源：牛客网
+
+
+给定两个-100到100的整数x和y,对x只能进行加1，减1，乘2操作，问最少对x进行几次操作能得到y？
+例如：
+a=3,b=11: 可以通过3*2*2-1，3次操作得到11；
+a=5,b=8：可以通过(5-1)*2，2次操作得到8；
+
+ 
+
+输入描述:
+输入以英文逗号分隔的两个数字，数字均在32位整数范围内。
+
+输出描述:
+输出一个数字
+示例1
+输入
+3,11
+输出
+3
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        while (scanner.hasNext()){
+            String str = scanner.next();
+            String[] str1 = str.split(",");
+            int a = Integer.parseInt(str1[0]);
+            int b = Integer.parseInt(str1[1]);
+            System.out.println(minTimes(a,b));
+        }
+    }
+    public static int minTimes(int a,int b){
+        if (a == b){
+            return 0;
+        }
+        List<number> list = new ArrayList<>();
+        list.add(new number(0,a));
+        while (!list.isEmpty()){
+            number tmp = list.remove(0);
+            if (tmp.num == b){
+                return tmp.floors;
+            }
+            else if(tmp.num < -100 || tmp.num > 100){
+                continue;
+            }
+            list.add(new number(tmp.floors+1,tmp.num+1));
+            list.add(new number(tmp.floors+1,tmp.num-1));
+            list.add(new number(tmp.floors+1,tmp.num*2));
+        }
+        return -1;
+    }
+}
+class number{
+    int floors;
+    int num;
+
+    public number(int floors, int num) {
+        this.floors = floors;
+        this.num = num;
+    }
+}
