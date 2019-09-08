@@ -1,27 +1,26 @@
 //1
-import java.util.LinkedList;
+import java.util.*;
 
- class MonkeyKing{
-    public static void main(String[] args) {
-        LinkedList<Integer> monkeys = new LinkedList<Integer>(){{
-            for (int i = 1; i <= 100; i++)
-                add(i);
-        }
-        };
-        int count = 15;
-        int i = -1;
-        while (count > 1){
-            int temp = i + 7;
-            if (temp >= count)
-                temp = temp % count;
-            monkeys.remove(temp);
-            count--;
-            i = --temp;
-        }
-        System.out.println(monkeys.get(0));
-    }
+public class Joseph {
+      public static int getResult(int n,int m){
+         LinkedList<Integer> list = new LinkedList<Integer>(){{
+             for (int i = 1; i <= n; i++)
+                 add(i);
+         }
+         };
+         int count = list.size();
+         int i = -1;
+         while (count > 1){
+             int temp = i + m;
+             if (temp >= count)
+                 temp = temp % count;
+             list.remove(temp);
+             count--;
+             i = --temp;
+         }
+         return list.get(0);
+     }
 }
-
 
 
 
