@@ -39,3 +39,55 @@ class Main03{
         System.out.println(result);
     }
 }
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+import java.util.*;
+
+public class LongestSubstring {
+    public int findLongest(String A, int n, String B, int m) {
+        // write code here
+             String longstr = "";
+        String shortstr = "";
+        if (A == null || B== null ){
+            return 0;
+        }
+        if (A.equals("")||B.equals("")){
+            return 0;
+        }
+        if (n > m){
+            longstr = A;
+            shortstr = B;
+        }
+        else{
+            longstr = B;
+            shortstr = A;
+        }
+        String cur = "";
+        for (int i = 0;i <shortstr.length();i++){
+            for (int start = 0,end = shortstr.length()-i;end <= shortstr.length();start++,end++){
+                cur = shortstr.substring(start,end);
+                if (longstr.contains(cur)){
+                    return cur.length();
+                }
+            }
+        }
+        return 0;
+
+    }
+}
