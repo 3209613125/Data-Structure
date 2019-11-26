@@ -1,3 +1,4 @@
+//模拟斗地主的洗牌，发牌，看牌
 public class poker {
     public static void main(String[] args) {
         //拼接花色和数字
