@@ -1,93 +1,26 @@
-class Main03{
-    // 求解两个字符号的最长公共子串
-    public static String maxSubstring(String strOne, String strTwo){
-        // 参数检查
-        if(strOne==null || strTwo == null){
-            return null;
+//https://www.nowcoder.com/questionTerminal/181a1a71c7574266ad07f9739f791506
+
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        while (scanner.hasNext()){
+            String s1 = scanner.next();
+            String s2 = scanner.next();
+            longsertStr(s1,s2);
         }
-        if(strOne.equals("") || strTwo.equals("")){
-            return null;
-        }
-        // 二者中较长的字符串
-        String max = "";
-        // 二者中较短的字符串
-        String min = "";
-        if(strOne.length() < strTwo.length()){
-            max = strTwo;
-            min = strOne;
-        } else{
-            max = strTwo;
-            min = strOne;
-        }
-        String current = "";
-        // 遍历较短的字符串，并依次减少短字符串的字符数量，判断长字符是否包含该子串
-        for(int i=0; i<min.length(); i++){
-            for(int begin=0, end=min.length()-i; end<=min.length(); begin++, end++){
-                current = min.substring(begin, end);
-                if(max.contains(current)){
-                    return current;
+    }
+    public static String longsertStr(String s1,String s2){
+       String max = (s1.length() > s2.length())?s1:s2;
+       String min = (s1.equals(max))?s2:s1;
+        for (int i = 0; i < min.length(); i++) {
+            for (int j = 0,k=min.length()-i; k <= min.length(); j++,k++) {
+                if (max.contains(min.substring(j,k))){
+                    System.out.println(min.substring(j,k));
+                    return min.substring(j,k);
                 }
             }
         }
         return null;
-    }
-//"1AB2345CD",9,"12345EF",7
-    public static void main(String[] args) {
-        String strOne = "1AB2345CD";
-        String strTwo = "12345EF";
-        String result = Main03.maxSubstring(strOne, strTwo);
-        System.out.println(result);
-    }
-}
-
-
-
-
-
-
-
-
-
-
-////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-import java.util.*;
-
-public class LongestSubstring {
-    public int findLongest(String A, int n, String B, int m) {
-        // write code here
-             String longstr = "";
-        String shortstr = "";
-        if (A == null || B== null ){
-            return 0;
-        }
-        if (A.equals("")||B.equals("")){
-            return 0;
-        }
-        if (n > m){
-            longstr = A;
-            shortstr = B;
-        }
-        else{
-            longstr = B;
-            shortstr = A;
-        }
-        String cur = "";
-        for (int i = 0;i <shortstr.length();i++){
-            for (int start = 0,end = shortstr.length()-i;end <= shortstr.length();start++,end++){
-                cur = shortstr.substring(start,end);
-                if (longstr.contains(cur)){
-                    return cur.length();
-                }
-            }
-        }
-        return 0;
-
     }
 }
