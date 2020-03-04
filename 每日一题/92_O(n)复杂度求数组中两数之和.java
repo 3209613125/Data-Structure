@@ -1,52 +1,23 @@
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
-class Main{
-    public static void main(String[] args) {
-        int [] array = {1,2,3,4,50,7,8,12,13};
-        Scanner scanner = new Scanner(System.in);
-        while (scanner.hasNext()){
-            int x = scanner.nextInt();
-            int start = 0;
-            int end = array.length-1;
-            find(start,end,x,array);
+public class Solution {
+    public ArrayList<Integer> FindNumbersWithSum(int [] array,int sum) {
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        if (array == null || array.length < 2) {
+            return list;
         }
-    }
-    public static void find(int start,int end,int x,int[] array){
-        List list = new ArrayList();
-        int i = start;
-        int j = end;
-        while (i < j){
-            while (i < j && x <= array[i] + array[j]){
-                if (i < j && x < array[i] + array[j]){
-                    j--;
-                }
-                if (i < j && x== array[i] + array[j]){
-                   list.add(i);
-                   list.add(j);
-                    System.out.println("array["+i+"]"+" "+"array["+j+"]");
-                    j--;
-                }
+        int i=0,j=array.length-1;
+        while(i<j){
+            if(array[i]+array[j]==sum){
+            list.add(array[i]);
+            list.add(array[j]);
+                return list;
+           }else if(array[i]+array[j]>sum){
+                j--;
+            }else{
+                i++;
             }
-            while (i < j && x >= array[i] + array[j]){
-                if (i < j && x > array[i] + array[j]){
-                    i++;
-                }
-                if (i < j && x== array[i] + array[j]){
-                    list.add(i);
-                    list.add(j);
-                    System.out.println("array["+i+"]"+" "+"array["+j+"]");
-                    i++;
-                }
-            }
+             
         }
-        if (array[i] == x){
-            list.add(i);
-            System.out.println("array["+i+"]");
-        }
-        if (list.isEmpty()){
-            System.out.println("null");
-        }
+        return list;
     }
 }
