@@ -44,7 +44,7 @@ class Main{
             while (i < j && tmp<=arr[j]){
                 j--;
             }
-            while (i < j && tmp >= arr[j]){
+            while (i < j && tmp >= arr[i]){
                 i++;
             }
             if (i < j){
@@ -133,3 +133,9 @@ class Main{
     }
 
 }
+
+//冒泡排序和选择排序的比较
+//都是on2
+//冒泡稳定，选择不稳定
+//冒泡每一次外循环，大的排到最后面
+//选择排序每一次外循环，小的排在最前面
